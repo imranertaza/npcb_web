@@ -1,0 +1,187 @@
+/* ================================================== */
+/*                 COMMON CSS                         */
+/* ================================================== */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --common-color: #00786E;
+    --footer-bg-color: #004E5B;
+}
+
+.bg-common {
+    background-color: var(--common-color);
+}
+
+.container {
+    max-width: 1140px;
+}
+
+.py-28 {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.max-width-fit {
+    max-width: fit-content;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mb-36 {
+    margin-bottom: 36px;
+}
+
+
+/* ================================================== */
+/*                 HEADER CSS                         */
+/* ================================================== */
+
+.custom-nav-manu a.nav-link {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* ================================================== */
+/*                 MAIN CSS                         */
+/* ================================================== */
+
+/* Banner section */
+.read-more-btn {
+    background: #FFFFFF;
+    color: #00786E;
+}
+
+.banner-content {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+}
+
+.banner-main-content-area {
+    padding: 20px;
+}
+
+.slider-area {
+    max-width: 780px;
+    width: 70%;
+}
+
+.slider-area h2 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin-top: 17px;
+}
+
+.slider-area p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin-top: 17px;
+}
+
+/* ================================================== */
+/*                 FOOTER CSS                         */
+/* ================================================== */
+
+footer {
+    background: var(--footer-bg-color);
+}
+
+.custom-underline {
+    height: 2px;
+    width: 50px;
+    background: #379A37;
+    margin-top: 15px;
+}
+
+.custom-footer-list li {
+    margin-bottom: 20px;
+}
+
+.custom-footer-list li a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.custom-footer-contact a,
+.custom-footer-contact div {
+    margin-bottom: 20px;
+}
+
+.custom-footer-contact a,
+.custom-footer-contact p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    line-height: 26px;
+}
+
+.footer-block h5 {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 28px;
+}
+
+.footer-hr {
+    background-color: #0C8947;
+    height: 1px;
+}
+
+.copyright {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.custom-footer-list li a:hover svg path {
+    fill: #379A37;
+}
