@@ -20,57 +20,7 @@
     <title>Document</title>
 
     <style>
-        .swiper {
-            width: 100%;
-            height: 100%;
-            background-color: var(--common-color);
-        }
 
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            display: flex;
-            justify-content: start;
-            align-items: start;
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .pagination-button-area {
-            bottom: 0 !important;
-            right: 0 !important;
-            height: fit-content !important;
-            padding: 20px;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            position: static !important;
-            color: transparent !important;
-        }
-
-        .swiper-pagination {
-            position: static !important;
-            margin-top: 20px;
-        }
-
-        .swiper-pagination-bullet {
-            background-color: #d9d9d9 !important;
-            opacity: 1 !important;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #d9d9d9 !important;
-            width: 28px !important;
-            height: 8px !important;
-            border-radius: 4px !important;
-        }
     </style>
 </head>
 
@@ -80,19 +30,18 @@
             <div class="container">
 
                 <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center gap-3 text-white" href="#">
+                <a class="navbar-brand d-inline" href="#">
                     <img src="/assets/image/logo.png" alt="Bangladesh Flag & NPC Logo" class="img-fluid">
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon bg-white"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse justify-content-end custom-nav-manu" id="navbarNav">
-                    <ul class="navbar-nav gap-3 text-center text-lg-start gap-3">
+                    <ul class="navbar-nav gap-3 text-md-center text-lg-start gap-3">
                         <li class="nav-item">
                             <a class="nav-link p-0" href="#"><span>Home</span></a>
                         </li>
@@ -152,7 +101,7 @@
                                     together 45 players on Monday at
                                     the Fayyaz Stadiumadjacent to the National Parliament, organised by the National
                                     Paralympic</p>
-                                <a class="read-more mt-16">Read More</a>
+                                <a href="" class="read-more mt-16">Read More</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -162,7 +111,7 @@
                                     together 45 players on Monday at
                                     the Fayyaz Stadiumadjacent to the National Parliament, organised by the National
                                     Paralympic</p>
-                                <a class="read-more mt-16">Read More</a>
+                                <a href="" class="read-more mt-16">Read More</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -172,7 +121,7 @@
                                     together 45 players on Monday at
                                     the Fayyaz Stadiumadjacent to the National Parliament, organised by the National
                                     Paralympic</p>
-                                <a class="read-more mt-16">Read More</a>
+                                <a href="" class="read-more mt-16">Read More</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -182,13 +131,13 @@
                                     together 45 players on Monday at
                                     the Fayyaz Stadiumadjacent to the National Parliament, organised by the National
                                     Paralympic</p>
-                                <a class="read-more mt-16">Read More</a>
+                                <a href="" class="read-more mt-16">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div
                         class="position-fixed w-25 z-3 h-100 pagination-button-area d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex gap-2 mb-2">
+                        <div class="d-flex gap-2 mb-md-2">
                             <div class="custom-swiper-button-prev swiper-button-prev">
                                 <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -215,12 +164,573 @@
                 </div>
             </div>
         </section>
+        <!-- Top News Section Start -->
+        <section class="container top-news-section py-100">
+            <div class="d-flex justify-content-between mb-30">
+                <h2 class="title-two">Top News</h2>
+                <a href="" class="btn-common btn btn-primary">View all</a>
+            </div>
+            <div class="row px-md-0 row-cols-md-2 justify-content-center justify-content-between">
+                <div class="top-news-card highlight">
+                    <img src="assets/image/top-news/1.jpg" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-four mb-2 p-0">
+                            <a href="" class="">Amputee Football Festival </a>
+                        </h5>
+                        <p class="content-text-sm">A spirited celebration of amputee football brought together 45
+                            players</p>
+                    </div>
+                </div>
+
+                <div class="row px-md-0 row-cols-md-2 justify-content-center">
+
+                    <div class="top-news-card">
+                        <img src="assets/image/top-news/2.jpg" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-four pb-0">
+                                <a href="" class="">National Youth Para Games concluded</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="top-news-card mb-md-0">
+                        <img src="assets/image/top-news/3.jpg" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-four pb-0">
+                                <a href="" class="">National Para Table Tennis Championship Begins</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="top-news-card mb-md-0">
+                        <img src="assets/image/top-news/4.jpg" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-four pb-0">
+                                <a href="" class="">UNB, Dhaka</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="top-news-card mb-md-0">
+                        <img src="assets/image/top-news/5.jpg" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-four pb-0">
+                                <a href="" class="">National Youth Para Games concluded</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Top News Section End -->
+        <!-- Game News Section Start -->
+        <section class="bg-primary py-100">
+            <div class="container">
+                <div class="d-flex justify-content-between mb-30">
+                    <h2 class="title-two text-white">Game News</h2>
+                    <a href="" class="btn-common btn btn-default text-primary bg-white">View all</a>
+                </div>
+                <div class="gaming-news-slider position-relative">
+                    <div class="swiper myGamingSwiper">
+                        <div class="swiper-wrapper mb-5">
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card">
+                                    <img src="assets/image/gaming-news/1.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">'BCB meetings won’t count without action'</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card">
+                                    <img src="assets/image/gaming-news/2.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">Amputee Football Festival showcases rising ...</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card">
+                                    <img src="assets/image/gaming-news/3.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">National Youth Para Games begin with a ....</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card">
+                                    <img src="assets/image/gaming-news/4.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">National Youth Para Games concluded</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card">
+                                    <img src="assets/image/gaming-news/3.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">National Youth Para Games begin with a ....</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card">
+                                    <img src="assets/image/gaming-news/1.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">'BCB meetings won’t count without action'</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card">
+                                    <img src="assets/image/gaming-news/4.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">National Youth Para Games concluded</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-0">
+                            <div class="d-flex gap-2 mb-md-2 justify-content-end">
+                                <div class="custom-swiper-button-prev swiper-button-prev">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="-0.5" y="0.5" width="35" height="34" rx="17"
+                                            transform="matrix(-1 0 0 1 35 0)" fill="white" />
+                                        <rect x="-0.5" y="0.5" width="35" height="34" rx="17"
+                                            transform="matrix(-1 0 0 1 35 0)" stroke="white" />
+                                        <path
+                                            d="M21.548 12.0802L20.487 11.0202L14.708 16.7972C14.6149 16.8898 14.5409 16.9999 14.4905 17.1211C14.44 17.2424 14.4141 17.3724 14.4141 17.5037C14.4141 17.6351 14.44 17.7651 14.4905 17.8863C14.5409 18.0076 14.6149 18.1177 14.708 18.2102L20.487 23.9902L21.547 22.9302L16.123 17.5052L21.548 12.0802Z"
+                                            fill="#00786E" />
+                                    </svg>
+
+                                </div>
+                                <div class="custom-swiper-button-next swiper-button-next">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="35" height="34" rx="17" fill="white" />
+                                        <rect x="0.5" y="0.5" width="35" height="34" rx="17" stroke="white" />
+                                        <path
+                                            d="M14.452 12.0802L15.513 11.0202L21.292 16.7972C21.3851 16.8898 21.4591 16.9999 21.5095 17.1211C21.56 17.2424 21.5859 17.3724 21.5859 17.5037C21.5859 17.6351 21.56 17.7651 21.5095 17.8863C21.4591 18.0076 21.3851 18.1177 21.292 18.2102L15.513 23.9902L14.453 22.9302L19.877 17.5052L14.452 12.0802Z"
+                                            fill="#00786E" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Game News Section End -->
+
+        <!-- Running Event Section Start -->
+        <section class="py-100">
+            <div class="container">
+                <div class="d-flex justify-content-between mb-30">
+                    <h2 class="title-two">Running Event</h2>
+                    <a href="" class="btn-common btn btn-primary">View all</a>
+                </div>
+                <div class="gaming-news-slider position-relative">
+                    <div class="swiper myRunningEventSwiper">
+                        <div class="swiper-wrapper mb-5">
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card running-event-card">
+                                    <img src="assets/image/running-event/1.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">'BCB meetings won’t count without action'</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card running-event-card">
+                                    <img src="assets/image/running-event/2.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">Amputee Football Festival showcases rising ...</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card running-event-card">
+                                    <img src="assets/image/running-event/3.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">National Youth Para Games begin with a ....</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card running-event-card">
+                                    <img src="assets/image/running-event/4.png" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">National Youth Para Games concluded</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card running-event-card">
+                                    <img src="assets/image/running-event/3.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">National Youth Para Games begin with a ....</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card running-event-card">
+                                    <img src="assets/image/running-event/1.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">'BCB meetings won’t count without action'</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card running-event-card">
+                                    <img src="assets/image/running-event/4.png" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four">
+                                            <a href="" class="">National Youth Para Games concluded</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-0">
+                            <div class="d-flex gap-2 mb-md-2 justify-content-end">
+                                <div class="custom-swiper-button-prev swiper-button-prev">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="-0.5" y="0.5" width="35" height="34" rx="17"
+                                            transform="matrix(-1 0 0 1 35 0)" stroke="#00786E" />
+                                        <path
+                                            d="M21.548 12.0802L20.487 11.0202L14.708 16.7972C14.6149 16.8898 14.5409 16.9999 14.4905 17.1211C14.44 17.2424 14.4141 17.3724 14.4141 17.5037C14.4141 17.6351 14.44 17.7651 14.4905 17.8863C14.5409 18.0076 14.6149 18.1177 14.708 18.2102L20.487 23.9902L21.547 22.9302L16.123 17.5052L21.548 12.0802Z"
+                                            fill="#00786E" />
+                                    </svg>
+                                </div>
+                                <div class="custom-swiper-button-next swiper-button-next">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="35" height="34" rx="17" stroke="#00786E" />
+                                        <path
+                                            d="M14.452 12.0802L15.513 11.0202L21.292 16.7972C21.3851 16.8898 21.4591 16.9999 21.5095 17.1211C21.56 17.2424 21.5859 17.3724 21.5859 17.5037C21.5859 17.6351 21.56 17.7651 21.5095 17.8863C21.4591 18.0076 21.3851 18.1177 21.292 18.2102L15.513 23.9902L14.453 22.9302L19.877 17.5052L14.452 12.0802Z"
+                                            fill="#00786E" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Running Event Section End -->
+        <!-- Upcoming Event Section Start -->
+        <section class="bg-primary py-100">
+            <div class="container">
+                <div class="d-flex justify-content-between mb-30">
+                    <h2 class="title-two text-white">Upcoming Event</h2>
+                    <a href="" class="btn-common btn btn-default text-primary bg-white">View all</a>
+                </div>
+                <div class="gaming-news-slider position-relative">
+                    <div class="swiper myUpcomingEventSwiper">
+                        <div class="swiper-wrapper mb-5">
+                            <div class="swiper-slide">
+                                <div class="upcoming-event-card">
+                                    <a href="#" aria-label="Upcoming Event 1">
+                                        <img src="assets/image/upcoming-event/1.jpg" class="card-img-top img-thumbnail"
+                                            alt="Upcoming Event 1">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="upcoming-event-card">
+                                     <a href="#" aria-label="Upcoming Event 1">
+                                    <img src="assets/image/upcoming-event/2.jpg" class="card-img-top img-thumbnail"
+                                        alt="news image">
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="upcoming-event-card">
+                                     <a href="#" aria-label="Upcoming Event 1">
+                                    <img src="assets/image/upcoming-event/3.png" class="card-img-top img-thumbnail"
+                                        alt="news image"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="upcoming-event-card">
+                                     <a href="#" aria-label="Upcoming Event 1">
+                                    <img src="assets/image/upcoming-event/4.png" class="card-img-top img-thumbnail"
+                                        alt="news image"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="upcoming-event-card">
+                                     <a href="#" aria-label="Upcoming Event 1">
+                                    <img src="assets/image/upcoming-event/3.png" class="card-img-top img-thumbnail"
+                                        alt="news image"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="upcoming-event-card">
+                                     <a href="#" aria-label="Upcoming Event 1">
+                                    <img src="assets/image/upcoming-event/2.jpg" class="card-img-top img-thumbnail"
+                                        alt="news image"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-0">
+                            <div class="d-flex gap-2 mb-md-2 justify-content-end">
+                                <div class="custom-swiper-button-prev swiper-button-prev">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="-0.5" y="0.5" width="35" height="34" rx="17"
+                                            transform="matrix(-1 0 0 1 35 0)" fill="white" />
+                                        <rect x="-0.5" y="0.5" width="35" height="34" rx="17"
+                                            transform="matrix(-1 0 0 1 35 0)" stroke="white" />
+                                        <path
+                                            d="M21.548 12.0802L20.487 11.0202L14.708 16.7972C14.6149 16.8898 14.5409 16.9999 14.4905 17.1211C14.44 17.2424 14.4141 17.3724 14.4141 17.5037C14.4141 17.6351 14.44 17.7651 14.4905 17.8863C14.5409 18.0076 14.6149 18.1177 14.708 18.2102L20.487 23.9902L21.547 22.9302L16.123 17.5052L21.548 12.0802Z"
+                                            fill="#00786E" />
+                                    </svg>
+
+                                </div>
+                                <div class="custom-swiper-button-next swiper-button-next">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="35" height="34" rx="17" fill="white" />
+                                        <rect x="0.5" y="0.5" width="35" height="34" rx="17" stroke="white" />
+                                        <path
+                                            d="M14.452 12.0802L15.513 11.0202L21.292 16.7972C21.3851 16.8898 21.4591 16.9999 21.5095 17.1211C21.56 17.2424 21.5859 17.3724 21.5859 17.5037C21.5859 17.6351 21.56 17.7651 21.5095 17.8863C21.4591 18.0076 21.3851 18.1177 21.292 18.2102L15.513 23.9902L14.453 22.9302L19.877 17.5052L14.452 12.0802Z"
+                                            fill="#00786E" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Upcoming Event Section End -->
+        <!-- Our mission and vision section start -->
+        <section class="container py-100">
+            <div class="row row-cols-md-2 align-items-center">
+                <div class="text-center mb-md-0 mb-4">
+                    <img class="img-fluid rounded-2" src="assets/image/mission-vision.png" alt="Mission and Vision">
+                </div>
+                <div class="">
+                    <h3 class="title-two mb-3">Our mission and vision</h3>
+                    <p class="content-text mb-3">The mission & vision of the National Paralympic Committee of Bangladesh
+                        (NPCB) is aligned with
+                        International Paralympic Committee's mission & vision. NPCB promotes the Paralympic movement
+                        within the country, enabling Para athletes to achieve sporting excellence.</p>
+                    <a href="" class="btn-primary btn-common">Read More</a>
+                </div>
+            </div>
+        </section>
+        <!-- Our mission and vision section End -->
+        <!-- Our Latest Blog Section Start -->
+        <section class="bg-custom-gray py-100 ">
+            <div class="container">
+                <div class="d-flex justify-content-between mb-30">
+                    <h2 class="title-two">Our Latest Blog</h2>
+                    <a href="" class="btn-common btn btn-primary">View all</a>
+                </div>
+                <div class="gaming-news-slider position-relative">
+                    <div class="swiper myLatestBlogSwiper">
+                        <div class="swiper-wrapper mb-5">
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card latest-blog-card">
+                                    <img src="assets/image/latest-blog/1.png" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <p class="content-text d-flex align-items-center"><svg width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 5.49844L12.9965 5.49845V4.50195C12.9965 4.2257 12.7727 4.00195 12.4965 4.00195C12.2203 4.00195 11.9965 4.2257 11.9965 4.50195V5.4982H7.9965V4.50195C7.9965 4.2257 7.77275 4.00195 7.4965 4.00195C7.22025 4.00195 6.9965 4.2257 6.9965 4.50195V5.4982H3C2.44775 5.4982 2 5.94595 2 6.4982V18.9982C2 19.5504 2.44775 19.9982 3 19.9982H17C17.5522 19.9982 18 19.5504 18 18.9982V6.4982C18 5.94619 17.5522 5.49844 17 5.49844ZM17 18.9982H3V6.4982H6.9965V7.00195C6.9965 7.27819 7.22025 7.50195 7.4965 7.50195C7.77275 7.50195 7.9965 7.27819 7.9965 7.00195V6.49845H11.9965V7.0022C11.9965 7.27845 12.2203 7.5022 12.4965 7.5022C12.7727 7.5022 12.9965 7.27845 12.9965 7.0022V6.49845H17V18.9982ZM13.5 11.9984H14.5C14.776 11.9984 15 11.7744 15 11.4984V10.4984C15 10.2224 14.776 9.99844 14.5 9.99844H13.5C13.224 9.99844 13 10.2224 13 10.4984V11.4984C13 11.7744 13.224 11.9984 13.5 11.9984ZM13.5 15.9982H14.5C14.776 15.9982 15 15.7744 15 15.4982V14.4982C15 14.2222 14.776 13.9982 14.5 13.9982H13.5C13.224 13.9982 13 14.2222 13 14.4982V15.4982C13 15.7747 13.224 15.9982 13.5 15.9982ZM10.5 13.9982H9.5C9.224 13.9982 9 14.2222 9 14.4982V15.4982C9 15.7744 9.224 15.9982 9.5 15.9982H10.5C10.776 15.9982 11 15.7744 11 15.4982V14.4982C11 14.2224 10.776 13.9982 10.5 13.9982ZM10.5 9.99844H9.5C9.224 9.99844 9 10.2224 9 10.4984V11.4984C9 11.7744 9.224 11.9984 9.5 11.9984H10.5C10.776 11.9984 11 11.7744 11 11.4984V10.4984C11 10.2222 10.776 9.99844 10.5 9.99844ZM6.5 9.99844H5.5C5.224 9.99844 5 10.2224 5 10.4984V11.4984C5 11.7744 5.224 11.9984 5.5 11.9984H6.5C6.776 11.9984 7 11.7744 7 11.4984V10.4984C7 10.2222 6.776 9.99844 6.5 9.99844ZM6.5 13.9982H5.5C5.224 13.9982 5 14.2222 5 14.4982V15.4982C5 15.7744 5.224 15.9982 5.5 15.9982H6.5C6.776 15.9982 7 15.7744 7 15.4982V14.4982C7 14.2224 6.776 13.9982 6.5 13.9982Z"
+                                                    fill="black" />
+                                            </svg>
+                                            15 Nov 2025
+                                        </p>
+                                        <h5 class="title-four mb-3">
+                                            <a href="" class="">Amputee Football Festival showcases rising talent in
+                                                Dhaka</a>
+                                        </h5>
+                                        <a href="" class="btn-primary btn-common">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card latest-blog-card">
+                                    <img src="assets/image/latest-blog/2.png" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <p class="content-text d-flex align-items-center"><svg width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 5.49844L12.9965 5.49845V4.50195C12.9965 4.2257 12.7727 4.00195 12.4965 4.00195C12.2203 4.00195 11.9965 4.2257 11.9965 4.50195V5.4982H7.9965V4.50195C7.9965 4.2257 7.77275 4.00195 7.4965 4.00195C7.22025 4.00195 6.9965 4.2257 6.9965 4.50195V5.4982H3C2.44775 5.4982 2 5.94595 2 6.4982V18.9982C2 19.5504 2.44775 19.9982 3 19.9982H17C17.5522 19.9982 18 19.5504 18 18.9982V6.4982C18 5.94619 17.5522 5.49844 17 5.49844ZM17 18.9982H3V6.4982H6.9965V7.00195C6.9965 7.27819 7.22025 7.50195 7.4965 7.50195C7.77275 7.50195 7.9965 7.27819 7.9965 7.00195V6.49845H11.9965V7.0022C11.9965 7.27845 12.2203 7.5022 12.4965 7.5022C12.7727 7.5022 12.9965 7.27845 12.9965 7.0022V6.49845H17V18.9982ZM13.5 11.9984H14.5C14.776 11.9984 15 11.7744 15 11.4984V10.4984C15 10.2224 14.776 9.99844 14.5 9.99844H13.5C13.224 9.99844 13 10.2224 13 10.4984V11.4984C13 11.7744 13.224 11.9984 13.5 11.9984ZM13.5 15.9982H14.5C14.776 15.9982 15 15.7744 15 15.4982V14.4982C15 14.2222 14.776 13.9982 14.5 13.9982H13.5C13.224 13.9982 13 14.2222 13 14.4982V15.4982C13 15.7747 13.224 15.9982 13.5 15.9982ZM10.5 13.9982H9.5C9.224 13.9982 9 14.2222 9 14.4982V15.4982C9 15.7744 9.224 15.9982 9.5 15.9982H10.5C10.776 15.9982 11 15.7744 11 15.4982V14.4982C11 14.2224 10.776 13.9982 10.5 13.9982ZM10.5 9.99844H9.5C9.224 9.99844 9 10.2224 9 10.4984V11.4984C9 11.7744 9.224 11.9984 9.5 11.9984H10.5C10.776 11.9984 11 11.7744 11 11.4984V10.4984C11 10.2222 10.776 9.99844 10.5 9.99844ZM6.5 9.99844H5.5C5.224 9.99844 5 10.2224 5 10.4984V11.4984C5 11.7744 5.224 11.9984 5.5 11.9984H6.5C6.776 11.9984 7 11.7744 7 11.4984V10.4984C7 10.2222 6.776 9.99844 6.5 9.99844ZM6.5 13.9982H5.5C5.224 13.9982 5 14.2222 5 14.4982V15.4982C5 15.7744 5.224 15.9982 5.5 15.9982H6.5C6.776 15.9982 7 15.7744 7 15.4982V14.4982C7 14.2224 6.776 13.9982 6.5 13.9982Z"
+                                                    fill="black" />
+                                            </svg>
+                                            15 Nov 2025
+                                        </p>
+                                        <h5 class="title-four mb-3">
+                                            <a href="" class="">Amputee Football Festival showcases rising talent in
+                                                Dhaka</a>
+                                        </h5>
+                                        <a href="" class="btn-primary btn-common">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card latest-blog-card">
+                                    <img src="assets/image/latest-blog/3.png" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <p class="content-text d-flex align-items-center"><svg width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 5.49844L12.9965 5.49845V4.50195C12.9965 4.2257 12.7727 4.00195 12.4965 4.00195C12.2203 4.00195 11.9965 4.2257 11.9965 4.50195V5.4982H7.9965V4.50195C7.9965 4.2257 7.77275 4.00195 7.4965 4.00195C7.22025 4.00195 6.9965 4.2257 6.9965 4.50195V5.4982H3C2.44775 5.4982 2 5.94595 2 6.4982V18.9982C2 19.5504 2.44775 19.9982 3 19.9982H17C17.5522 19.9982 18 19.5504 18 18.9982V6.4982C18 5.94619 17.5522 5.49844 17 5.49844ZM17 18.9982H3V6.4982H6.9965V7.00195C6.9965 7.27819 7.22025 7.50195 7.4965 7.50195C7.77275 7.50195 7.9965 7.27819 7.9965 7.00195V6.49845H11.9965V7.0022C11.9965 7.27845 12.2203 7.5022 12.4965 7.5022C12.7727 7.5022 12.9965 7.27845 12.9965 7.0022V6.49845H17V18.9982ZM13.5 11.9984H14.5C14.776 11.9984 15 11.7744 15 11.4984V10.4984C15 10.2224 14.776 9.99844 14.5 9.99844H13.5C13.224 9.99844 13 10.2224 13 10.4984V11.4984C13 11.7744 13.224 11.9984 13.5 11.9984ZM13.5 15.9982H14.5C14.776 15.9982 15 15.7744 15 15.4982V14.4982C15 14.2222 14.776 13.9982 14.5 13.9982H13.5C13.224 13.9982 13 14.2222 13 14.4982V15.4982C13 15.7747 13.224 15.9982 13.5 15.9982ZM10.5 13.9982H9.5C9.224 13.9982 9 14.2222 9 14.4982V15.4982C9 15.7744 9.224 15.9982 9.5 15.9982H10.5C10.776 15.9982 11 15.7744 11 15.4982V14.4982C11 14.2224 10.776 13.9982 10.5 13.9982ZM10.5 9.99844H9.5C9.224 9.99844 9 10.2224 9 10.4984V11.4984C9 11.7744 9.224 11.9984 9.5 11.9984H10.5C10.776 11.9984 11 11.7744 11 11.4984V10.4984C11 10.2222 10.776 9.99844 10.5 9.99844ZM6.5 9.99844H5.5C5.224 9.99844 5 10.2224 5 10.4984V11.4984C5 11.7744 5.224 11.9984 5.5 11.9984H6.5C6.776 11.9984 7 11.7744 7 11.4984V10.4984C7 10.2222 6.776 9.99844 6.5 9.99844ZM6.5 13.9982H5.5C5.224 13.9982 5 14.2222 5 14.4982V15.4982C5 15.7744 5.224 15.9982 5.5 15.9982H6.5C6.776 15.9982 7 15.7744 7 15.4982V14.4982C7 14.2224 6.776 13.9982 6.5 13.9982Z"
+                                                    fill="black" />
+                                            </svg>
+                                            15 Nov 2025
+                                        </p>
+                                        <h5 class="title-four mb-3">
+                                            <a href="" class="">Amputee Football Festival showcases rising talent in
+                                                Dhaka</a>
+                                        </h5>
+                                        <a href="" class="btn-primary btn-common">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card latest-blog-card">
+                                    <img src="assets/image/running-event/3.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <p class="content-text d-flex align-items-center"><svg width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 5.49844L12.9965 5.49845V4.50195C12.9965 4.2257 12.7727 4.00195 12.4965 4.00195C12.2203 4.00195 11.9965 4.2257 11.9965 4.50195V5.4982H7.9965V4.50195C7.9965 4.2257 7.77275 4.00195 7.4965 4.00195C7.22025 4.00195 6.9965 4.2257 6.9965 4.50195V5.4982H3C2.44775 5.4982 2 5.94595 2 6.4982V18.9982C2 19.5504 2.44775 19.9982 3 19.9982H17C17.5522 19.9982 18 19.5504 18 18.9982V6.4982C18 5.94619 17.5522 5.49844 17 5.49844ZM17 18.9982H3V6.4982H6.9965V7.00195C6.9965 7.27819 7.22025 7.50195 7.4965 7.50195C7.77275 7.50195 7.9965 7.27819 7.9965 7.00195V6.49845H11.9965V7.0022C11.9965 7.27845 12.2203 7.5022 12.4965 7.5022C12.7727 7.5022 12.9965 7.27845 12.9965 7.0022V6.49845H17V18.9982ZM13.5 11.9984H14.5C14.776 11.9984 15 11.7744 15 11.4984V10.4984C15 10.2224 14.776 9.99844 14.5 9.99844H13.5C13.224 9.99844 13 10.2224 13 10.4984V11.4984C13 11.7744 13.224 11.9984 13.5 11.9984ZM13.5 15.9982H14.5C14.776 15.9982 15 15.7744 15 15.4982V14.4982C15 14.2222 14.776 13.9982 14.5 13.9982H13.5C13.224 13.9982 13 14.2222 13 14.4982V15.4982C13 15.7747 13.224 15.9982 13.5 15.9982ZM10.5 13.9982H9.5C9.224 13.9982 9 14.2222 9 14.4982V15.4982C9 15.7744 9.224 15.9982 9.5 15.9982H10.5C10.776 15.9982 11 15.7744 11 15.4982V14.4982C11 14.2224 10.776 13.9982 10.5 13.9982ZM10.5 9.99844H9.5C9.224 9.99844 9 10.2224 9 10.4984V11.4984C9 11.7744 9.224 11.9984 9.5 11.9984H10.5C10.776 11.9984 11 11.7744 11 11.4984V10.4984C11 10.2222 10.776 9.99844 10.5 9.99844ZM6.5 9.99844H5.5C5.224 9.99844 5 10.2224 5 10.4984V11.4984C5 11.7744 5.224 11.9984 5.5 11.9984H6.5C6.776 11.9984 7 11.7744 7 11.4984V10.4984C7 10.2222 6.776 9.99844 6.5 9.99844ZM6.5 13.9982H5.5C5.224 13.9982 5 14.2222 5 14.4982V15.4982C5 15.7744 5.224 15.9982 5.5 15.9982H6.5C6.776 15.9982 7 15.7744 7 15.4982V14.4982C7 14.2224 6.776 13.9982 6.5 13.9982Z"
+                                                    fill="black" />
+                                            </svg>
+                                            15 Nov 2025
+                                        </p>
+                                        <h5 class="title-four mb-3">
+                                            <a href="" class="">'BCB meetings won’t count without action'</a>
+                                        </h5>
+                                        <a href="" class="btn-primary btn-common">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card latest-blog-card">
+                                    <img src="assets/image/running-event/2.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <p class="content-text d-flex align-items-center"><svg width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 5.49844L12.9965 5.49845V4.50195C12.9965 4.2257 12.7727 4.00195 12.4965 4.00195C12.2203 4.00195 11.9965 4.2257 11.9965 4.50195V5.4982H7.9965V4.50195C7.9965 4.2257 7.77275 4.00195 7.4965 4.00195C7.22025 4.00195 6.9965 4.2257 6.9965 4.50195V5.4982H3C2.44775 5.4982 2 5.94595 2 6.4982V18.9982C2 19.5504 2.44775 19.9982 3 19.9982H17C17.5522 19.9982 18 19.5504 18 18.9982V6.4982C18 5.94619 17.5522 5.49844 17 5.49844ZM17 18.9982H3V6.4982H6.9965V7.00195C6.9965 7.27819 7.22025 7.50195 7.4965 7.50195C7.77275 7.50195 7.9965 7.27819 7.9965 7.00195V6.49845H11.9965V7.0022C11.9965 7.27845 12.2203 7.5022 12.4965 7.5022C12.7727 7.5022 12.9965 7.27845 12.9965 7.0022V6.49845H17V18.9982ZM13.5 11.9984H14.5C14.776 11.9984 15 11.7744 15 11.4984V10.4984C15 10.2224 14.776 9.99844 14.5 9.99844H13.5C13.224 9.99844 13 10.2224 13 10.4984V11.4984C13 11.7744 13.224 11.9984 13.5 11.9984ZM13.5 15.9982H14.5C14.776 15.9982 15 15.7744 15 15.4982V14.4982C15 14.2222 14.776 13.9982 14.5 13.9982H13.5C13.224 13.9982 13 14.2222 13 14.4982V15.4982C13 15.7747 13.224 15.9982 13.5 15.9982ZM10.5 13.9982H9.5C9.224 13.9982 9 14.2222 9 14.4982V15.4982C9 15.7744 9.224 15.9982 9.5 15.9982H10.5C10.776 15.9982 11 15.7744 11 15.4982V14.4982C11 14.2224 10.776 13.9982 10.5 13.9982ZM10.5 9.99844H9.5C9.224 9.99844 9 10.2224 9 10.4984V11.4984C9 11.7744 9.224 11.9984 9.5 11.9984H10.5C10.776 11.9984 11 11.7744 11 11.4984V10.4984C11 10.2222 10.776 9.99844 10.5 9.99844ZM6.5 9.99844H5.5C5.224 9.99844 5 10.2224 5 10.4984V11.4984C5 11.7744 5.224 11.9984 5.5 11.9984H6.5C6.776 11.9984 7 11.7744 7 11.4984V10.4984C7 10.2222 6.776 9.99844 6.5 9.99844ZM6.5 13.9982H5.5C5.224 13.9982 5 14.2222 5 14.4982V15.4982C5 15.7744 5.224 15.9982 5.5 15.9982H6.5C6.776 15.9982 7 15.7744 7 15.4982V14.4982C7 14.2224 6.776 13.9982 6.5 13.9982Z"
+                                                    fill="black" />
+                                            </svg>
+                                            15 Nov 2025
+                                        </p>
+                                        <h5 class="title-four mb-3">
+                                            <a href="" class="">'BCB meetings won’t count without action'</a>
+                                        </h5>
+                                        <a href="" class="btn-primary btn-common">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card latest-blog-card">
+                                    <img src="assets/image/running-event/1.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <p class="content-text d-flex align-items-center"><svg width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 5.49844L12.9965 5.49845V4.50195C12.9965 4.2257 12.7727 4.00195 12.4965 4.00195C12.2203 4.00195 11.9965 4.2257 11.9965 4.50195V5.4982H7.9965V4.50195C7.9965 4.2257 7.77275 4.00195 7.4965 4.00195C7.22025 4.00195 6.9965 4.2257 6.9965 4.50195V5.4982H3C2.44775 5.4982 2 5.94595 2 6.4982V18.9982C2 19.5504 2.44775 19.9982 3 19.9982H17C17.5522 19.9982 18 19.5504 18 18.9982V6.4982C18 5.94619 17.5522 5.49844 17 5.49844ZM17 18.9982H3V6.4982H6.9965V7.00195C6.9965 7.27819 7.22025 7.50195 7.4965 7.50195C7.77275 7.50195 7.9965 7.27819 7.9965 7.00195V6.49845H11.9965V7.0022C11.9965 7.27845 12.2203 7.5022 12.4965 7.5022C12.7727 7.5022 12.9965 7.27845 12.9965 7.0022V6.49845H17V18.9982ZM13.5 11.9984H14.5C14.776 11.9984 15 11.7744 15 11.4984V10.4984C15 10.2224 14.776 9.99844 14.5 9.99844H13.5C13.224 9.99844 13 10.2224 13 10.4984V11.4984C13 11.7744 13.224 11.9984 13.5 11.9984ZM13.5 15.9982H14.5C14.776 15.9982 15 15.7744 15 15.4982V14.4982C15 14.2222 14.776 13.9982 14.5 13.9982H13.5C13.224 13.9982 13 14.2222 13 14.4982V15.4982C13 15.7747 13.224 15.9982 13.5 15.9982ZM10.5 13.9982H9.5C9.224 13.9982 9 14.2222 9 14.4982V15.4982C9 15.7744 9.224 15.9982 9.5 15.9982H10.5C10.776 15.9982 11 15.7744 11 15.4982V14.4982C11 14.2224 10.776 13.9982 10.5 13.9982ZM10.5 9.99844H9.5C9.224 9.99844 9 10.2224 9 10.4984V11.4984C9 11.7744 9.224 11.9984 9.5 11.9984H10.5C10.776 11.9984 11 11.7744 11 11.4984V10.4984C11 10.2222 10.776 9.99844 10.5 9.99844ZM6.5 9.99844H5.5C5.224 9.99844 5 10.2224 5 10.4984V11.4984C5 11.7744 5.224 11.9984 5.5 11.9984H6.5C6.776 11.9984 7 11.7744 7 11.4984V10.4984C7 10.2222 6.776 9.99844 6.5 9.99844ZM6.5 13.9982H5.5C5.224 13.9982 5 14.2222 5 14.4982V15.4982C5 15.7744 5.224 15.9982 5.5 15.9982H6.5C6.776 15.9982 7 15.7744 7 15.4982V14.4982C7 14.2224 6.776 13.9982 6.5 13.9982Z"
+                                                    fill="black" />
+                                            </svg>
+                                            15 Nov 2025
+                                        </p>
+                                        <h5 class="title-four mb-3">
+                                            <a href="" class="">'BCB meetings won’t count without action'</a>
+                                        </h5>
+                                        <a href="" class="btn-primary btn-common">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gaming-news-card latest-blog-card">
+                                    <img src="assets/image/running-event/4.png" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <p class="content-text d-flex align-items-center"><svg width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 5.49844L12.9965 5.49845V4.50195C12.9965 4.2257 12.7727 4.00195 12.4965 4.00195C12.2203 4.00195 11.9965 4.2257 11.9965 4.50195V5.4982H7.9965V4.50195C7.9965 4.2257 7.77275 4.00195 7.4965 4.00195C7.22025 4.00195 6.9965 4.2257 6.9965 4.50195V5.4982H3C2.44775 5.4982 2 5.94595 2 6.4982V18.9982C2 19.5504 2.44775 19.9982 3 19.9982H17C17.5522 19.9982 18 19.5504 18 18.9982V6.4982C18 5.94619 17.5522 5.49844 17 5.49844ZM17 18.9982H3V6.4982H6.9965V7.00195C6.9965 7.27819 7.22025 7.50195 7.4965 7.50195C7.77275 7.50195 7.9965 7.27819 7.9965 7.00195V6.49845H11.9965V7.0022C11.9965 7.27845 12.2203 7.5022 12.4965 7.5022C12.7727 7.5022 12.9965 7.27845 12.9965 7.0022V6.49845H17V18.9982ZM13.5 11.9984H14.5C14.776 11.9984 15 11.7744 15 11.4984V10.4984C15 10.2224 14.776 9.99844 14.5 9.99844H13.5C13.224 9.99844 13 10.2224 13 10.4984V11.4984C13 11.7744 13.224 11.9984 13.5 11.9984ZM13.5 15.9982H14.5C14.776 15.9982 15 15.7744 15 15.4982V14.4982C15 14.2222 14.776 13.9982 14.5 13.9982H13.5C13.224 13.9982 13 14.2222 13 14.4982V15.4982C13 15.7747 13.224 15.9982 13.5 15.9982ZM10.5 13.9982H9.5C9.224 13.9982 9 14.2222 9 14.4982V15.4982C9 15.7744 9.224 15.9982 9.5 15.9982H10.5C10.776 15.9982 11 15.7744 11 15.4982V14.4982C11 14.2224 10.776 13.9982 10.5 13.9982ZM10.5 9.99844H9.5C9.224 9.99844 9 10.2224 9 10.4984V11.4984C9 11.7744 9.224 11.9984 9.5 11.9984H10.5C10.776 11.9984 11 11.7744 11 11.4984V10.4984C11 10.2222 10.776 9.99844 10.5 9.99844ZM6.5 9.99844H5.5C5.224 9.99844 5 10.2224 5 10.4984V11.4984C5 11.7744 5.224 11.9984 5.5 11.9984H6.5C6.776 11.9984 7 11.7744 7 11.4984V10.4984C7 10.2222 6.776 9.99844 6.5 9.99844ZM6.5 13.9982H5.5C5.224 13.9982 5 14.2222 5 14.4982V15.4982C5 15.7744 5.224 15.9982 5.5 15.9982H6.5C6.776 15.9982 7 15.7744 7 15.4982V14.4982C7 14.2224 6.776 13.9982 6.5 13.9982Z"
+                                                    fill="black" />
+                                            </svg>
+                                            15 Nov 2025
+                                        </p>
+                                        <h5 class="title-four mb-3">
+                                            <a href="" class="">'BCB meetings won’t count without action'</a>
+                                        </h5>
+                                        <a href="" class="btn-primary btn-common">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-0">
+                            <div class="d-flex gap-2 mb-md-2 justify-content-end">
+                                <div class="custom-swiper-button-prev swiper-button-prev">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="-0.5" y="0.5" width="35" height="34" rx="17"
+                                            transform="matrix(-1 0 0 1 35 0)" stroke="#00786E" />
+                                        <path
+                                            d="M21.548 12.0802L20.487 11.0202L14.708 16.7972C14.6149 16.8898 14.5409 16.9999 14.4905 17.1211C14.44 17.2424 14.4141 17.3724 14.4141 17.5037C14.4141 17.6351 14.44 17.7651 14.4905 17.8863C14.5409 18.0076 14.6149 18.1177 14.708 18.2102L20.487 23.9902L21.547 22.9302L16.123 17.5052L21.548 12.0802Z"
+                                            fill="#00786E" />
+                                    </svg>
+                                </div>
+                                <div class="custom-swiper-button-next swiper-button-next">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="35" height="34" rx="17" stroke="#00786E" />
+                                        <path
+                                            d="M14.452 12.0802L15.513 11.0202L21.292 16.7972C21.3851 16.8898 21.4591 16.9999 21.5095 17.1211C21.56 17.2424 21.5859 17.3724 21.5859 17.5037C21.5859 17.6351 21.56 17.7651 21.5095 17.8863C21.4591 18.0076 21.3851 18.1177 21.292 18.2102L15.513 23.9902L14.453 22.9302L19.877 17.5052L14.452 12.0802Z"
+                                            fill="#00786E" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Latest Blog Section End -->
     </main>
 
     <!-- Footer Start -->
     <footer class="text-white">
         <div class="container">
-            <div class="row justify-content-between pt-100 footer-block">
+            <div class="row justify-content-between pt-100 footer-block gap-5">
 
                 <!-- Column 1: INFORMATION -->
                 <div class="col-lg-4 col-md-6 max-width-fit">
@@ -347,7 +857,7 @@
                         CONTACT US
                         <div class="custom-underline"></div>
                     </h5>
-                    <a class="mb-2 d-flex gap-2">
+                    <a href="" class="mb-2 d-flex gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"
                             class="__web-inspector-hide-shortcut__">
                             <path
@@ -356,7 +866,7 @@
                         </svg>
                         01818-670403
                     </a>
-                    <a class="mb-2 d-flex gap-2">
+                    <a href="" class="mb-2 d-flex gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path
                                 d="M9.00609 3.75V7.5H7.50505V6H3.00195V19.5H4.50299V20.25C4.50299 21.4834 5.52029 22.5 6.75454 22.5C7.98879 22.5 9.00609 21.4834 9.00609 20.25V19.5H21.0144V7.5H18.0123V3.75H9.00609ZM10.5071 5.25H16.5113V9H10.5071V5.25ZM4.50299 7.5H6.00402V18H4.50299V7.5ZM7.50505 9H9.00609V10.5H18.0123V9H19.5133V18H7.50505V9ZM9.75661 12V13.5H11.2576V12H9.75661ZM12.7587 12V13.5H14.2597V12H12.7587ZM15.7607 12V13.5H17.2618V12H15.7607ZM9.75661 15V16.5H11.2576V15H9.75661ZM12.7587 15V16.5H14.2597V15H12.7587ZM15.7607 15V16.5H17.2618V15H15.7607ZM6.00402 19.5H7.50505V20.25C7.50505 20.666 7.17084 21 6.75454 21C6.33824 21 6.00402 20.666 6.00402 20.25V19.5Z"
@@ -364,7 +874,7 @@
                         </svg>
                         01928-174380
                     </a>
-                    <a class="mb-2 d-flex gap-2">
+                    <a href="" class="mb-2 d-flex gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path
                                 d="M2.25146 6V19.5H21.7649V6H2.25146ZM5.48807 7.5H18.5283L12.0082 11.8359L5.48807 7.5ZM3.7525 8.15625L11.586 13.3828L12.0082 13.6406L12.4304 13.3828L20.2639 8.15625V18H3.7525V8.15625Z"
@@ -390,7 +900,7 @@
             </div>
             <!-- footer logo -->
             <div class="mt-50 mb-36">
-                <a>
+                <a href="" class="navbar-brand">
                     <img src="assets/image/footer-logo.svg" alt="logo">
                 </a>
             </div>
