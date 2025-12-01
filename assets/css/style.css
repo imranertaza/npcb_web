@@ -9,6 +9,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    font-size: clamp(14px, 1.5vw, 18px);
 }
 
 :root {
@@ -18,6 +19,7 @@ body {
     --common-text-black: #333333;
     --common-white: #fff;
     --text-color-dark-emphasis: #262936;
+    --brand-blue: #2B2B52;
 
 }
 
@@ -61,8 +63,24 @@ button {
     padding-top: 100px;
 }
 
+.py-50 {
+    padding: 50px 0;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
 .pb-100 {
     padding-bottom: 100px;
+}
+
+.mb-12 {
+    margin-bottom: 12px !important;
+}
+
+.mt-12 {
+    margin-top: 12px !important;
 }
 
 .mt-16 {
@@ -73,6 +91,18 @@ button {
     margin-top: 50px;
 }
 
+.mt-40 {
+    margin-top: 40px !important;
+}
+
+.mt-60 {
+    margin-top: 60px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
+}
+
 .mb-36 {
     margin-bottom: 36px;
 }
@@ -81,6 +111,17 @@ button {
     margin-bottom: 30px;
 }
 
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.text-blue {
+    color: var(--brand-blue);
+}
+
+.bg-blue {
+    background: var(--brand-blue);
+}
 
 .title-one {
     font-family: 'Poppins', sans-serif;
@@ -115,7 +156,31 @@ button {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: clamp(14px, 1.5vw, 18px);
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.title-five {
+    font-weight: 500;
+    /* Medium weight */
+    font-style: normal;
+    /* "Medium" is handled by weight */
     font-size: clamp(14px, 1.5vw, 16px);
+    line-height: 120%;
+    /* Equivalent to 1.2 */
+    letter-spacing: 0;
+    /* No extra spacing */
+    margin: 0;
+}
+
+
+.header-one {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(20px, 2vw, 34px);
     line-height: 120%;
     letter-spacing: 0;
     margin: 0;
@@ -126,7 +191,7 @@ button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(14px, 1.2vw, 18px);
+    font-size: clamp(14px, 1.5vw, 18px);
     line-height: 130%;
     letter-spacing: 0;
     /* No extra spacing */
@@ -136,7 +201,7 @@ button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(12px, 1vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 120%;
     letter-spacing: 0;
     margin: 0;
@@ -147,7 +212,7 @@ button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 18px);
     line-height: 140%;
     letter-spacing: 0;
     padding: 8px 16px;
@@ -169,9 +234,43 @@ button {
     color: #FFFFFF;
 }
 
-.rounded-6{
+.rounded-6 {
     border-radius: 6px !important;
 }
+
+/* pagination  */
+
+.custom-pagination .page-link {
+    border: none;
+    background: none;
+    display: inline-block;
+    padding: 5px 8px;
+    font-size: clamp(14px, 1.5vw, 18px);
+    color: #444;
+    border-radius: 4px;
+    min-width: 26px;
+}
+
+.custom-pagination .active-page {
+    background-color: #0d766e;
+    /* teal color similar to screenshot */
+    color: white;
+    border-radius: 6px;
+}
+
+.custom-pagination .text-page:hover {
+    color: #0d766e;
+}
+
+.custom-pagination .page-item {
+    padding-left: 16px;
+}
+
+.custom-pagination .arrow-page {
+    font-size: clamp(14px, 1.5vw, 18px);
+    margin-left: 16px;
+}
+
 /* ================================================== */
 /*                 HEADER CSS                         */
 /* ================================================== */
@@ -179,14 +278,21 @@ button {
 .custom-nav-manu a.nav-link {
     font-weight: 400;
     font-style: Regular;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 18px);
     color: #FFFFFF;
 }
 
 .navbar-brand img {
-    max-width: 275px;
+    max-width: 300px;
     /* or whatever size fits */
     height: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar-brand img {
+        max-width: 220px;
+    }
 }
 
 /* ================================================== */
@@ -231,7 +337,7 @@ button {
 
 
 .swiper-slide {
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 18px);
     display: flex;
     justify-content: start;
     align-items: start;
@@ -302,7 +408,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
-    z-index: 999;
+    /* z-index: 999; */
     color: var(--common-white);
 }
 
@@ -401,11 +507,12 @@ button {
     background-color: transparent;
 }
 
-.myRunningEventSwiper .card-body {
+.running-event-card .card-body {
     background: var(--common-color);
 }
 
-.running-event-card .title-four a {
+.running-event-card .title-four a,
+.running-event-card .title-five a {
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -463,7 +570,7 @@ footer {
 
 .custom-footer-list li a {
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 18px);
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: capitalize;
@@ -478,7 +585,7 @@ footer {
 .custom-footer-contact a,
 .custom-footer-contact p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 18px);
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: capitalize;
