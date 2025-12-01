@@ -14,14 +14,23 @@ body {
 :root {
     --common-color: #00786E;
     --footer-bg-color: #004E5B;
+    --common-black: #000000;
+    --common-text-black: #333333;
+    --common-white: #fff;
+    --text-color-dark-emphasis: #262936;
+
+}
+
+.container {
+    max-width: 1144px !important;
+}
+
+.text-dark-emphasis {
+    color: var(--text-color-dark-emphasis) !important;
 }
 
 .bg-common {
     background-color: var(--common-color);
-}
-
-.container {
-    max-width: 1140px;
 }
 
 .py-28 {
@@ -43,8 +52,21 @@ button {
     max-width: fit-content;
 }
 
+.py-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
 .pt-100 {
     padding-top: 100px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.mt-16 {
+    margin-top: 16px;
 }
 
 .mt-50 {
@@ -55,7 +77,101 @@ button {
     margin-bottom: 36px;
 }
 
+.mb-30 {
+    margin-bottom: 30px;
+}
 
+
+.title-one {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(24px, 2.5vw, 34px);
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+.title-two {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(20px, 2vw, 27px);
+    line-height: 120%;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.title-three {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.title-four {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(14px, 1.5vw, 16px);
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+
+.content-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(14px, 1.2vw, 18px);
+    line-height: 130%;
+    letter-spacing: 0;
+    /* No extra spacing */
+}
+
+.content-text-sm {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(12px, 1vw, 14px);
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0;
+
+}
+
+.btn-common {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+    padding: 8px 16px;
+    border-radius: 0 !important;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--common-color);
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #00504C !important;
+    color: #FFFFFF;
+}
+
+.rounded-6{
+    border-radius: 6px !important;
+}
 /* ================================================== */
 /*                 HEADER CSS                         */
 /* ================================================== */
@@ -67,49 +183,264 @@ button {
     color: #FFFFFF;
 }
 
+.navbar-brand img {
+    max-width: 275px;
+    /* or whatever size fits */
+    height: auto;
+}
+
 /* ================================================== */
 /*                 MAIN CSS                         */
 /* ================================================== */
 
 /* Banner section */
-.read-more-btn {
-    background: #FFFFFF;
-    color: #00786E;
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .banner-content {
     position: absolute;
-    width: 100%;
-    bottom: 20px;
-    left: 0;
+    bottom: 10px;
+    left: 50%;
+    min-height: 20vh;
+    transform: translate(-50%, -0%);
+    color: #FFFFFF;
 }
 
-.banner-main-content-area {
+.slider-content {
+    width: 60% !important;
+    text-align: left;
     padding: 20px;
 }
 
-.slider-area {
-    max-width: 780px;
-    width: 70%;
+.swiper {
+    width: 100%;
+    height: 100%;
+
 }
 
-.slider-area h2 {
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 120%;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-    margin-top: 17px;
-}
 
-.slider-area p {
-    font-weight: 400;
+
+.swiper-slide {
     font-size: 18px;
-    line-height: 130%;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-    margin-top: 17px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
 }
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .pagination-button-area {
+    bottom: 0 !important;
+    right: 0 !important;
+    height: fit-content !important;
+    padding: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: static !important;
+    color: transparent !important;
+}
+
+.swiper-pagination {
+    position: static !important;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #d9d9d9 !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #d9d9d9 !important;
+    width: 28px !important;
+    height: 8px !important;
+    border-radius: 4px !important;
+}
+
+.banner .slider-content .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    text-align: left;
+    color: var(--common-color);
+    cursor: pointer;
+}
+
+.banner .slider-content {
+    margin: 0;
+}
+
+.breadcrumb {
+    height: 300px !important;
+    overflow: hidden;
+}
+
+.breadcrumb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.breadcrumb .page-title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 999;
+    color: var(--common-white);
+}
+
+@media screen and (max-width: 768px) {
+    .banner .slider-content {
+        width: 100% !important;
+    }
+
+    .banner .pagination-button-area {
+        right: 12% !important;
+        width: fit-content !important;
+        padding: 10px !important;
+    }
+}
+
+
+
+
+/* ================================================== */
+/*                 TOP NEWS CSS                         */
+/* ================================================== */
+.banner .swiper {
+    background-color: var(--common-color);
+}
+
+.top-news-card {
+    margin-bottom: 24px;
+}
+
+
+
+.top-news-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+}
+
+.top-news-card.highlight {
+    color: #FFFFFF;
+}
+
+.top-news-card.highlight img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.top-news-card.highlight .card-body {
+    padding: 20px 30px;
+    background-color: var(--common-color);
+}
+
+.top-news-card .title-four {
+    padding: 10px 12px;
+}
+
+
+.top-news-card .title-four a {
+    text-decoration: none;
+    color: var(--common-color);
+}
+
+.top-news-card.highlight .title-four a {
+    color: #fff !important;
+}
+
+/* ================================================== */
+/*                 GAMING NEWS CSS                         */
+/* ================================================== */
+.gaming-news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.gaming-news-card .card-body {
+    padding: 20px 22px 30px 22px;
+    background-color: #FFFFFF;
+
+}
+
+.gaming-news-card .title-four a {
+    text-decoration: none;
+    color: var(--common-text-black);
+}
+
+
+/* ================================================== */
+/*                  RUNNING EVENT CSS                    */
+/* ================================================== */
+.running-event-card img {
+    height: 230px;
+}
+
+.swiper.myRunningEventSwiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+    background-color: transparent;
+}
+
+.myRunningEventSwiper .card-body {
+    background: var(--common-color);
+}
+
+.running-event-card .title-four a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* ================================================== */
+/*                  RUNNING EVENT CSS                  */
+/* ================================================== */
+
+.upcoming-event-card img {
+    width: 100%;
+    height: 525px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+
+/* ================================================== */
+/*                  Our Latest Blog CSS                  */
+/* ================================================== */
+
+.bg-custom-gray {
+    background-color: #E3D9CD;
+}
+
+.latest-blog-card img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.latest-blog-card .card-body {
+    padding: 12px;
+}
+
 
 /* ================================================== */
 /*                 FOOTER CSS                         */
