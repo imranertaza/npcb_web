@@ -1,7 +1,6 @@
-/* ================================================== */
-/*                 COMMON CSS                         */
-/* ================================================== */
-
+/* ===========================
+   COMMON CSS
+   =========================== */
 * {
     padding: 0;
     margin: 0;
@@ -10,34 +9,6 @@
 body {
     font-family: "Poppins", sans-serif;
     font-size: clamp(14px, 1.5vw, 18px);
-}
-
-:root {
-    --common-color: #00786E;
-    --footer-bg-color: #004E5B;
-    --common-black: #000000;
-    --common-text-black: #333333;
-    --common-white: #fff;
-    --text-color-dark-emphasis: #262936;
-    --brand-blue: #2B2B52;
-
-}
-
-.container {
-    max-width: 1144px !important;
-}
-
-.text-dark-emphasis {
-    color: var(--text-color-dark-emphasis) !important;
-}
-
-.bg-common {
-    background-color: var(--common-color);
-}
-
-.py-28 {
-    padding-top: 28px !important;
-    padding-bottom: 28px !important;
 }
 
 a {
@@ -50,175 +21,177 @@ button {
     background: none;
 }
 
+/* ===========================
+   VARIABLES
+   =========================== */
+:root {
+    --common-color: #00786E;
+    --footer-bg-color: #004E5B;
+    --common-black: #000000;
+    --common-text-black: #333333;
+    --common-white: #fff;
+    --text-color-dark-emphasis: #262936;
+    --brand-blue: #2B2B52;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1144px !important;
+}
+
 .max-width-fit {
     max-width: fit-content;
 }
 
-.py-100 {
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
-}
-
-.pt-100 {
-    padding-top: 100px;
-}
-
-.py-50 {
-    padding: 50px 0;
-}
-
-.pt-30 {
-    padding-top: 30px;
-}
-
-.pb-100 {
-    padding-bottom: 100px;
-}
-
-.mb-12 {
-    margin-bottom: 12px !important;
-}
-
-.mt-12 {
-    margin-top: 12px !important;
-}
-
-.mt-16 {
-    margin-top: 16px;
-}
-
-.mt-50 {
-    margin-top: 50px;
-}
-
-.mt-40 {
-    margin-top: 40px !important;
-}
-
-.mt-60 {
-    margin-top: 60px !important;
-}
-
-.mb-60 {
-    margin-bottom: 60px !important;
-}
-
-.mb-36 {
-    margin-bottom: 36px;
-}
-
-.mb-30 {
-    margin-bottom: 30px;
-}
-
-.mb-40 {
-    margin-bottom: 40px;
-}
-
-.line-height-normal {
-    line-height: normal;
-}
-
-.text-blue {
-    color: var(--brand-blue);
+.bg-common {
+    background-color: var(--common-color);
 }
 
 .bg-blue {
     background: var(--brand-blue);
 }
 
+.text-dark-emphasis {
+    color: var(--text-color-dark-emphasis) !important;
+}
+
+.text-blue {
+    color: var(--brand-blue);
+}
+
+.line-height-normal {
+    line-height: normal;
+}
+
+/* TYPOGRAPHY */
 .title-one {
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: clamp(24px, 2.5vw, 34px);
     line-height: 120%;
-    letter-spacing: 0;
 }
 
 .title-two {
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-style: normal;
     font-size: clamp(20px, 2vw, 27px);
     line-height: 120%;
-    letter-spacing: 0;
     text-transform: capitalize;
     margin: 0;
 }
 
 .title-three {
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-style: normal;
     font-size: clamp(18px, 2vw, 22px);
     line-height: 120%;
-    letter-spacing: 0;
     margin: 0;
 }
 
 .title-four {
-    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-style: normal;
     font-size: clamp(14px, 1.5vw, 18px);
     line-height: 120%;
-    letter-spacing: 0;
     margin: 0;
 }
 
 .title-five {
     font-weight: 500;
-    /* Medium weight */
-    font-style: normal;
-    /* "Medium" is handled by weight */
     font-size: clamp(14px, 1.5vw, 16px);
     line-height: 120%;
-    /* Equivalent to 1.2 */
-    letter-spacing: 0;
-    /* No extra spacing */
     margin: 0;
 }
-
 
 .header-one {
-    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-style: normal;
     font-size: clamp(20px, 2vw, 34px);
     line-height: 120%;
-    letter-spacing: 0;
     margin: 0;
 }
 
-
 .content-text {
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-style: normal;
     font-size: clamp(14px, 1.5vw, 18px);
     line-height: 130%;
-    letter-spacing: 0;
-    /* No extra spacing */
 }
 
 .content-text-sm {
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-style: normal;
     font-size: clamp(12px, 1.5vw, 14px);
     line-height: 120%;
-    letter-spacing: 0;
     margin: 0;
-
 }
 
+/* SPACING UTILITIES */
+.py-28 {
+    padding-top: clamp(16px, 3vw, 28px) !important;
+    padding-bottom: clamp(16px, 3vw, 28px) !important;
+}
+
+.py-50 {
+    padding-top: clamp(24px, 5vw, 50px) !important;
+    padding-bottom: clamp(24px, 5vw, 50px) !important;
+}
+
+.py-100 {
+    padding-top: clamp(40px, 8vw, 100px) !important;
+    padding-bottom: clamp(40px, 8vw, 100px) !important;
+}
+
+.pt-30 {
+    padding-top: clamp(16px, 4vw, 30px) !important;
+}
+
+.pt-100 {
+    padding-top: clamp(40px, 8vw, 100px) !important;
+}
+
+.pb-100 {
+    padding-bottom: clamp(40px, 8vw, 100px) !important;
+}
+
+.mt-12 {
+    margin-top: clamp(8px, 2vw, 12px) !important;
+}
+
+.mt-16 {
+    margin-top: clamp(10px, 2.5vw, 16px) !important;
+}
+
+.mt-40 {
+    margin-top: clamp(20px, 5vw, 40px) !important;
+}
+
+.mt-50 {
+    margin-top: clamp(24px, 6vw, 50px) !important;
+}
+
+.mt-60 {
+    margin-top: clamp(28px, 7vw, 60px) !important;
+}
+
+.mb-12 {
+    margin-bottom: clamp(8px, 2vw, 12px) !important;
+}
+
+.mb-30 {
+    margin-bottom: clamp(16px, 4vw, 30px) !important;
+}
+
+.mb-36 {
+    margin-bottom: clamp(18px, 4.5vw, 36px) !important;
+}
+
+.mb-40 {
+    margin-bottom: clamp(20px, 5vw, 40px) !important;
+}
+
+.mb-60 {
+    margin-bottom: clamp(28px, 7vw, 60px) !important;
+}
+
+/* BUTTONS */
 .btn-common {
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-style: normal;
     font-size: clamp(14px, 1.5vw, 18px);
     line-height: 140%;
-    letter-spacing: 0;
     padding: 8px 16px;
     border-radius: 0 !important;
     transition: background-color 0.3s ease;
@@ -227,7 +200,7 @@ button {
 
 .btn-primary {
     background-color: var(--common-color);
-    color: #FFFFFF;
+    color: #fff;
     border: none;
 }
 
@@ -235,15 +208,14 @@ button {
 .btn-primary:focus,
 .btn-primary:active {
     background-color: #00504C !important;
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .rounded-6 {
     border-radius: 6px !important;
 }
 
-/* pagination  */
-
+/* PAGINATION */
 .custom-pagination .page-link {
     border: none;
     background: none;
@@ -257,8 +229,7 @@ button {
 
 .custom-pagination .active-page {
     background-color: #0d766e;
-    /* teal color similar to screenshot */
-    color: white;
+    color: #fff;
     border-radius: 6px;
 }
 
@@ -275,7 +246,8 @@ button {
     margin-left: 16px;
 }
 
-@media screen and (max-width:768px) {
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
     .social-icon svg {
         width: 22px;
     }
@@ -287,7 +259,7 @@ button {
 
 .custom-nav-manu a.nav-link {
     font-weight: 400;
-    font-style: Regular;
+    font-style: normal;
     font-size: clamp(14px, 1.5vw, 18px);
     color: #FFFFFF;
 }
@@ -298,6 +270,9 @@ button {
     height: auto;
 }
 
+.dropdown-toggle::after {
+    display: none !important;
+}
 
 @media screen and (max-width: 768px) {
     .navbar-brand img {
@@ -305,15 +280,20 @@ button {
     }
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
     color: var(--common-white) !important;
 }
-ul.dropdown-menu.show{
+
+ul.dropdown-menu.show {
     border-radius: 0 !important;
 }
-.dropdown-item.active, .dropdown-item:active{
+
+.dropdown-item.active,
+.dropdown-item:active {
     background-color: var(--common-color);
 }
+
 /* ================================================== */
 /*                 MAIN CSS                         */
 /* ================================================== */
@@ -592,8 +572,8 @@ footer {
 .custom-footer-list li a {
     font-weight: 400;
     font-size: clamp(14px, 1.5vw, 18px);
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1.2;
+    letter-spacing: 0;
     text-transform: capitalize;
     color: #FFFFFF;
 }
@@ -608,7 +588,7 @@ footer {
     font-weight: 400;
     font-size: clamp(14px, 1.5vw, 18px);
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-transform: capitalize;
     color: #FFFFFF;
     line-height: 26px;
@@ -619,7 +599,7 @@ footer {
     font-weight: 600;
     font-size: 20px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 28px;
@@ -630,17 +610,49 @@ footer {
     height: 1px;
 }
 
+.custom-footer-list li a:hover svg path {
+    fill: #379A37;
+}
+
 .copyright {
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-transform: capitalize;
     color: #FFFFFF;
     text-align: center;
     padding: 14px 0;
 }
 
-.custom-footer-list li a:hover svg path {
-    fill: #379A37;
+.social-icon svg rect {
+    transition: all 0.3s ease;
+}
+
+/* Facebook hover */
+.social-icon.facebook:hover svg rect {
+    stroke: #1877F2;
+    /* Facebook blue */
+    fill: #1877F2;
+}
+
+/* Twitter hover */
+.social-icon.twitter:hover svg rect {
+    stroke: #1DA1F2;
+    /* Twitter blue */
+    fill: #1DA1F2;
+}
+
+/* Instagram hover */
+.social-icon.instagram:hover svg rect {
+    stroke: #E1306C;
+    /* Instagram pink */
+    fill: #E1306C;
+}
+
+/* LinkedIn hover */
+.social-icon.linkedin:hover svg rect {
+    stroke: #0A66C2;
+    /* LinkedIn blue */
+    fill: #0A66C2;
 }
