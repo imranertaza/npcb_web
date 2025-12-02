@@ -115,6 +115,10 @@ button {
     margin-bottom: 40px;
 }
 
+.line-height-normal {
+    line-height: normal;
+}
+
 .text-blue {
     color: var(--brand-blue);
 }
@@ -271,6 +275,12 @@ button {
     margin-left: 16px;
 }
 
+@media screen and (max-width:768px) {
+    .social-icon svg {
+        width: 22px;
+    }
+}
+
 /* ================================================== */
 /*                 HEADER CSS                         */
 /* ================================================== */
@@ -295,6 +305,15 @@ button {
     }
 }
 
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: var(--common-white) !important;
+}
+ul.dropdown-menu.show{
+    border-radius: 0 !important;
+}
+.dropdown-item.active, .dropdown-item:active{
+    background-color: var(--common-color);
+}
 /* ================================================== */
 /*                 MAIN CSS                         */
 /* ================================================== */
@@ -405,8 +424,10 @@ button {
 }
 
 .breadcrumb .page-title {
+    text-align: center;
     top: 50%;
     left: 50%;
+    font-size: clamp(18px, 2.5vw, 34px);
     transform: translate(-50%, 50%);
     /* z-index: 999; */
     color: var(--common-white);

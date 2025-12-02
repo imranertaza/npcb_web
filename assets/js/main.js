@@ -26,7 +26,7 @@ var gamingSwiper = new Swiper(".myGamingSwiper", {
     0: {
       slidesPerView: 1, // mobile
     },
-    576: {
+    480: {
       slidesPerView: 2, // small tablets
     },
     768: {
@@ -49,13 +49,16 @@ var runningEventSwiper = new Swiper(".myRunningEventSwiper", {
     0: {
       slidesPerView: 1,
     },
-    576: {
+    480: {
       slidesPerView: 2,
     },
     768: {
       slidesPerView: 3,
     },
     992: {
+      slidesPerView: 3,
+    },
+    1200: {
       slidesPerView: 4,
     }
   }
@@ -72,13 +75,15 @@ var upcomingEventSwiper = new Swiper(".myUpcomingEventSwiper", {
     0: {
       slidesPerView: 1,
     },
-    576: {
+    480: {
       slidesPerView: 2,
     },
     768: {
       slidesPerView: 3,
     },
     992: {
+      slidesPerView: 3,
+    },1200: {
       slidesPerView: 4,
     }
   }
@@ -95,7 +100,7 @@ var latestBlogSwiper = new Swiper(".myLatestBlogSwiper", {
     0: {
       slidesPerView: 1,
     },
-    576: {
+    480: {
       slidesPerView: 2,
     },
     768: {

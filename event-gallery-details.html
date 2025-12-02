@@ -22,7 +22,7 @@
     <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script> -->
 
     <link href="assets/css/style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Event Gallery Details | NPCB</title>
 
     <style>
         .upcoming-event-card img {
@@ -37,7 +37,7 @@
             <div class="container">
 
                 <!-- Logo -->
-                <a class="navbar-brand d-inline" href="#">
+                <a class="navbar-brand d-inline" href="/index.html">
                     <img src="/assets/image/logo.png" alt="Bangladesh Flag & NPC Logo" class="img-fluid">
                 </a>
 
@@ -49,49 +49,75 @@
                 <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse justify-content-end custom-nav-manu" id="navbarNav">
                     <ul class="navbar-nav gap-3 text-md-center text-lg-start gap-3">
+
+                        <!-- Home -->
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#"><span>Home</span></a>
+                            <a class="nav-link p-0" href="/index.html"><span>Home</span></a>
                         </li>
+
+                        <!-- About -->
                         <li class="nav-item">
-                            <a class="nav-link p-0 d-inline-flex gap-1" href="#">
+                            <a class="nav-link p-0 gap-1" href="about.html">
                                 <span>About us</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+
+                        <!-- Events Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="eventsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Events</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                <li><a class="dropdown-item" href="/running-event.html">Running Event</a></li>
+                                <li><a class="dropdown-item" href="/upcoming-event.html">Upcoming Event</a></li>
+                            </ul>
                         </li>
+
+                        <!-- News -->
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="news-and-updates.html">
                                 <span>News</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+
+                        <!-- Photo Gallery Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="galleryDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Photo Gallery</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                                <li><a class="dropdown-item" href="/sports-gallery.html">Sports Gallery</a></li>
+                                <li><a class="dropdown-item" href="/event-gallery.html">Event Gallery</a></li>
+                            </ul>
                         </li>
+
+                        <!-- Sports -->
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="sports.html">
                                 <span>Sports</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
                         </li>
+
+                        <!-- Contact -->
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="/contact.html">
                                 <span>Contact Us</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
                         </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
+
     </header>
 
     <main>
@@ -106,7 +132,7 @@
         <section class="py-100 container">
             <div class="gaming-news-slider position-relative">
                 <h2 class="header-one text-blue mb-60">National Para basket ball Championship Begins</h2>
-                <div class="row row-cols-md-3 g-4">
+                <div class="row row-cols-lg-3 row-cols-md-2 g-4">
                     <div class="upcoming-event-card">
                         <a href="assets/image/event-gallery-details/1.png" data-lightbox="event-gallery"
                             data-title="Upcoming Event 1">

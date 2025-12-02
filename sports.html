@@ -17,11 +17,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <link href="assets/css/style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Sports | NPCB</title>
 
     <style>
-        .upcoming-event-card img {
-            height: 392px;
+        .published-date {
+            padding: 10px 8px;
+            gap: 8px;
+            border-radius: 5px;
+            color: var(--common-white);
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .contact-query-section .card {
+                padding: 22px 30px;
+            }
+        }
+
+        .news-card .card-body {
+            padding: 20px;
+            border: 1px solid #EAEAEA;
+            border-top: 0;
+
         }
     </style>
 </head>
@@ -32,7 +51,7 @@
             <div class="container">
 
                 <!-- Logo -->
-                <a class="navbar-brand d-inline" href="#">
+                                <a class="navbar-brand d-inline" href="/index.html">
                     <img src="/assets/image/logo.png" alt="Bangladesh Flag & NPC Logo" class="img-fluid">
                 </a>
 
@@ -45,22 +64,22 @@
                 <div class="collapse navbar-collapse justify-content-end custom-nav-manu" id="navbarNav">
                     <ul class="navbar-nav gap-3 text-md-center text-lg-start gap-3">
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#"><span>Home</span></a>
+                                                        <a class="nav-link p-0" href="/index.html"><span>Home</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0 d-inline-flex gap-1" href="#">
+                            <a class="nav-link p-0 d-inline-flex gap-1" href="about.html">
                                 <span>About us</span>
                                 <img src="/assets/image/down-arow.svg" alt="down-arow" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="/running-event.html">
                                 <span>Events</span>
                                 <img src="/assets/image/down-arow.svg" alt="down-arow" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="news-and-updates.html">
                                 <span>News</span>
                                 <img src="/assets/image/down-arow.svg" alt="down-arow" />
                             </a>
@@ -72,13 +91,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="sports.html">
                                 <span>Sports</span>
                                 <img src="/assets/image/down-arow.svg" alt="down-arow" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                           <a class="nav-link p-0" href="/contact.html">
                                 <span>Contact Us</span>
                                 <img src="/assets/image/down-arow.svg" alt="down-arow" />
                             </a>
@@ -94,107 +113,110 @@
         <section class="breadcrumb position-relative">
             <img class="img-fluid" src="assets/image/about/breadcrumb.png" alt="">
             <img class="position-absolute bottom-0 w-100" src="assets/image/about/breadcrumb-gradient.png" alt="">
-            <h6 class="page-title title-one position-absolute">Sports Gallery Details</h6>
+            <h6 class="page-title title-one position-absolute">Sports</h6>
         </section>
         <!-- Breadcrumb Section End -->
         <!-- News & Updates section start -->
         <section class="py-100 container">
-            <div class="gaming-news-slider position-relative">
-                <h2 class="header-one text-blue mb-60">National Para basket ball Championship Begins</h2>
-                <div class="row row-cols-md-3 g-4">
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/1.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
+            <div class="mb-4">
+                <img class="img-fluid w-100" src="assets/image/sports/header.png" alt="">
+            </div>
+            <div class="row  row-cols-xl-4 row-cols-md-3 row-cols-sm-2 g-4">
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/1.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
                     </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/2.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/3.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/4.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/5.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/6.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/7.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/8.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/9.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/10.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/11.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-                    <div class="upcoming-event-card">
-                        <a href="#" aria-label="Upcoming Event 1">
-                            <img src="assets/image/sports-gallery-details/12.png" class="card-img-top"
-                                alt="Upcoming Event 1">
-                        </a>
-                    </div>
-
                 </div>
-                <div class=" text-center">
-                    <nav class="mt-60">
-                        <ul class="pagination custom-pagination justify-content-center">
-                            <li class="page-item">
-                                <a class="page-link active-page" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link text-page" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link text-page" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link arrow-page" href="#">
-                                    →
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/2.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/3.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/4.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/5.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/6.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/7.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/8.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/9.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/10.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/11.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="gaming-news-card running-event-card">
+                    <img src="assets/image/sports/12.png" class="card-img-top" alt="news image">
+                    <div class="card-body">
+                        <h5 class="title-five">
+                            <a href="" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
+                        </h5>
+                    </div>
                 </div>
             </div>
         </section>

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <link href="assets/css/style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Home | NPCB</title>
 
     <style>
 
@@ -30,7 +30,7 @@
             <div class="container">
 
                 <!-- Logo -->
-                <a class="navbar-brand d-inline" href="#">
+                <a class="navbar-brand d-inline" href="/index.html">
                     <img src="/assets/image/logo.png" alt="Bangladesh Flag & NPC Logo" class="img-fluid">
                 </a>
 
@@ -42,45 +42,70 @@
                 <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse justify-content-end custom-nav-manu" id="navbarNav">
                     <ul class="navbar-nav gap-3 text-md-center text-lg-start gap-3">
+
+                        <!-- Home -->
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#"><span>Home</span></a>
+                            <a class="nav-link p-0" href="/index.html"><span>Home</span></a>
                         </li>
+
+                        <!-- About -->
                         <li class="nav-item">
-                            <a class="nav-link p-0 d-inline-flex gap-1" href="#">
+                            <a class="nav-link p-0 gap-1" href="about.html">
                                 <span>About us</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+
+                        <!-- Events Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="eventsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Events</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                <li><a class="dropdown-item" href="/running-event.html">Running Event</a></li>
+                                <li><a class="dropdown-item" href="/upcoming-event.html">Upcoming Event</a></li>
+                            </ul>
                         </li>
+
+                        <!-- News -->
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="news-and-updates.html">
                                 <span>News</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+
+                        <!-- Photo Gallery Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="galleryDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Photo Gallery</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                                <li><a class="dropdown-item" href="/sports-gallery.html">Sports Gallery</a></li>
+                                <li><a class="dropdown-item" href="/event-gallery.html">Event Gallery</a></li>
+                            </ul>
                         </li>
+
+                        <!-- Sports -->
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="sports.html">
                                 <span>Sports</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
                         </li>
+
+                        <!-- Contact -->
                         <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0" href="/contact.html">
                                 <span>Contact Us</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow" />
+
                             </a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -170,7 +195,7 @@
                 <h2 class="title-two">Top News</h2>
                 <a href="news-and-updates.html" class="btn-common btn btn-primary">View all</a>
             </div>
-            <div class="row px-md-0 row-cols-md-2 justify-content-center justify-content-between">
+            <div class="row px-md-0 row-cols-xl-2 justify-content-center justify-content-between">
                 <div class="top-news-card highlight">
                     <img src="assets/image/top-news/1.jpg" class="card-img-top" alt="news image">
                     <div class="card-body">
@@ -225,7 +250,8 @@
             <div class="container">
                 <div class="d-flex justify-content-between mb-30">
                     <h2 class="title-two text-white">Game News</h2>
-                    <a href="news-and-updates.html" class="btn-common btn btn-default text-primary bg-white">View all</a>
+                    <a href="news-and-updates.html" class="btn-common btn btn-default text-primary bg-white">View
+                        all</a>
                 </div>
                 <div class="gaming-news-slider position-relative">
                     <div class="swiper myGamingSwiper">
@@ -235,7 +261,8 @@
                                     <img src="assets/image/gaming-news/1.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">'BCB meetings won’t count without action'</a>
+                                            <a href="news-details.html" class="">'BCB meetings won’t count without
+                                                action'</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -245,7 +272,8 @@
                                     <img src="assets/image/gaming-news/2.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">Amputee Football Festival showcases ...</a>
+                                            <a href="news-details.html" class="">Amputee Football Festival showcases
+                                                ...</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -255,7 +283,8 @@
                                     <img src="assets/image/gaming-news/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">National Youth Para Games begin with a ....</a>
+                                            <a href="news-details.html" class="">National Youth Para Games begin with a
+                                                ....</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -275,7 +304,8 @@
                                     <img src="assets/image/gaming-news/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">National Youth Para Games begin with a ....</a>
+                                            <a href="news-details.html" class="">National Youth Para Games begin with a
+                                                ....</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -285,7 +315,8 @@
                                     <img src="assets/image/gaming-news/1.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">'BCB meetings won’t count without action'</a>
+                                            <a href="news-details.html" class="">'BCB meetings won’t count without
+                                                action'</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -350,7 +381,8 @@
                                     <img src="assets/image/running-event/1.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">'BCB meetings won’t count without action'</a>
+                                            <a href="event-details.html" class="">'BCB meetings won’t count without
+                                                action'</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -360,7 +392,8 @@
                                     <img src="assets/image/running-event/2.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">Amputee Football Festival showcases ...</a>
+                                            <a href="event-details.html" class="">Amputee Football Festival showcases
+                                                ...</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -370,7 +403,8 @@
                                     <img src="assets/image/running-event/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">National Youth Para Games begin with a ....</a>
+                                            <a href="event-details.html" class="">National Youth Para Games begin with a
+                                                ....</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -380,7 +414,8 @@
                                     <img src="assets/image/running-event/4.png" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">National Youth Para Games concluded</a>
+                                            <a href="event-details.html" class="">National Youth Para Games
+                                                concluded</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -390,7 +425,8 @@
                                     <img src="assets/image/running-event/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">National Youth Para Games begin with a ....</a>
+                                            <a href="event-details.html" class="">National Youth Para Games begin with a
+                                                ....</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -400,7 +436,8 @@
                                     <img src="assets/image/running-event/1.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">'BCB meetings won’t count without action'</a>
+                                            <a href="event-details.html" class="">'BCB meetings won’t count without
+                                                action'</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -410,7 +447,8 @@
                                     <img src="assets/image/running-event/4.png" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">National Youth Para Games concluded</a>
+                                            <a href="event-details.html" class="">National Youth Para Games
+                                                concluded</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -465,38 +503,38 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="upcoming-event-card">
-                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
-                                    <img src="assets/image/upcoming-event/2.jpg" class="card-img-top img-thumbnail"
-                                        alt="news image">
-                                        </a>
+                                    <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
+                                        <img src="assets/image/upcoming-event/2.jpg" class="card-img-top img-thumbnail"
+                                            alt="news image">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="upcoming-event-card">
-                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
-                                    <img src="assets/image/upcoming-event/3.png" class="card-img-top img-thumbnail"
-                                        alt="news image"></a>
+                                    <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
+                                        <img src="assets/image/upcoming-event/3.png" class="card-img-top img-thumbnail"
+                                            alt="news image"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="upcoming-event-card">
-                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
-                                    <img src="assets/image/upcoming-event/4.png" class="card-img-top img-thumbnail"
-                                        alt="news image"></a>
+                                    <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
+                                        <img src="assets/image/upcoming-event/4.png" class="card-img-top img-thumbnail"
+                                            alt="news image"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="upcoming-event-card">
-                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
-                                    <img src="assets/image/upcoming-event/3.png" class="card-img-top img-thumbnail"
-                                        alt="news image"></a>
+                                    <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
+                                        <img src="assets/image/upcoming-event/3.png" class="card-img-top img-thumbnail"
+                                            alt="news image"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="upcoming-event-card">
-                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
-                                    <img src="assets/image/upcoming-event/2.jpg" class="card-img-top img-thumbnail"
-                                        alt="news image"></a>
+                                    <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
+                                        <img src="assets/image/upcoming-event/2.jpg" class="card-img-top img-thumbnail"
+                                            alt="news image"></a>
                                 </div>
                             </div>
                         </div>
@@ -596,7 +634,7 @@
                                             <a href="" class="">Amputee Football Festival showcases rising talent in
                                                 Dhaka</a>
                                         </h5>
-                                         <a href="/blog-details.html" class="btn-primary btn-common">View Details</a>
+                                        <a href="/blog-details.html" class="btn-primary btn-common">View Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -616,7 +654,7 @@
                                             <a href="" class="">Amputee Football Festival showcases rising talent in
                                                 Dhaka</a>
                                         </h5>
-                                         <a href="/blog-details.html" class="btn-primary btn-common">View Details</a>
+                                        <a href="/blog-details.html" class="btn-primary btn-common">View Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -635,7 +673,7 @@
                                         <h5 class="title-four mb-3">
                                             <a href="" class="">'BCB meetings won’t count without action'</a>
                                         </h5>
-                                         <a href="/blog-details.html" class="btn-primary btn-common">View Details</a>
+                                        <a href="/blog-details.html" class="btn-primary btn-common">View Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -692,7 +730,7 @@
                                         <h5 class="title-four mb-3">
                                             <a href="" class="">'BCB meetings won’t count without action'</a>
                                         </h5>
-                                         <a href="/blog-details.html" class="btn-primary btn-common">View Details</a>
+                                        <a href="/blog-details.html" class="btn-primary btn-common">View Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -730,7 +768,7 @@
     <!-- Footer Start -->
     <footer class="text-white">
         <div class="container">
-            <div class="row justify-content-between pt-100 footer-block gap-5">
+            <div class="row justify-content-between pt-100 footer-block gap-xl-5">
 
                 <!-- Column 1: INFORMATION -->
                 <div class="col-lg-4 col-md-6 max-width-fit">
