@@ -18,6 +18,125 @@
 
     <link href="assets/css/style.css" rel="stylesheet">
     <title>Home | NPCB</title>
+    <style>
+        .nav-link {
+            position: relative !important;
+            display: inline-block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: var(--white, #fff);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .navbar-nav .dropdown:hover>.dropdown-menu {
+            display: block;
+            margin-top: 0;
+            border-radius: 0;
+        }
+
+        .navbar-nav .dropdown-menu {
+            margin-top: 0;
+        }
+
+
+        /* card body setup */
+        .hover-fill-horizontal .card-body {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* animated background */
+        .hover-fill-horizontal .card-body::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            /* start collapsed */
+            height: 100%;
+            background-color: var(--common-color);
+            z-index: -1;
+            transition: width 0.4s ease;
+        }
+
+        /* expand background when parent card is hovered */
+        .hover-fill-horizontal:hover .card-body::before {
+            width: 100%;
+        }
+
+
+
+        /* optional: change text color on hover */
+        .hover-fill-horizontal:hover .card-body,
+        .hover-fill-horizontal:hover .card-body a {
+            color: #fff;
+        }
+
+        .hover-fill-horizontal.fill-white-muted .card-body::before {
+            background-color: #adece5;
+        }
+
+        .hover-fill-horizontal.fill-white-muted:hover .card-body a {
+            color: var(--common-black);
+        }
+
+        .btn-1 {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            transition: transition 0.5s ease-in-out;
+        }
+
+        .btn-1.slower {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            transition: all 0.8s ease-in-out
+        }
+
+        .btn-1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50px;
+            bottom: 0;
+            right: 0;
+            width: 430px;
+            border-right: 100px solid #fff0;
+            border-bottom: 152px solid var(--primary-color, #ED1E24);
+            transform: translateX(-100%);
+            transition: transform 0.9s cubic-bezier(.25, 1, .5, 1);
+            z-index: -1
+        }
+
+        .slower.btn-1::before {
+            transition: transform 1.9s cubic-bezier(.25, 1, .5, 1)
+        }
+
+        .btn-1:hover {
+            color: var(--text-white, #fff) !important;
+            z-index: 10
+        }
+
+
+        .btn-1:hover::before {
+            transform: translateX(0)
+        }
+    </style>
 </head>
 
 <body>
@@ -37,7 +156,7 @@
 
                 <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse justify-content-end custom-nav-manu" id="navbarNav">
-                    <ul class="navbar-nav gap-3 text-md-center text-lg-start gap-3">
+                    <ul class="navbar-nav gap-md-4 gap-3 mt-3 mt-lg-0 text-md-center text-lg-start">
 
                         <!-- Home -->
                         <li class="nav-item">
@@ -48,7 +167,6 @@
                         <li class="nav-item">
                             <a class="nav-link p-0 gap-1" href="about.html">
                                 <span>About us</span>
-
                             </a>
                         </li>
 
@@ -57,20 +175,13 @@
                             <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="eventsDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Events</span>
-                                <svg width="24" height="12" viewBox="0 0 24 12" fill="none"
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_1037_49100)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M11.289 10.1569L5.63199 4.49994L7.04598 3.08594L11.996 8.03594L16.946 3.08594L18.36 4.49994L12.703 10.1569C12.5155 10.3444 12.2612 10.4497 11.996 10.4497C11.7308 10.4497 11.4765 10.3444 11.289 10.1569Z"
-                                            fill="white" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1037_49101">
-                                            <rect width="12" height="24" fill="white"
-                                                transform="translate(24 0) rotate(90)" />
-                                        </clipPath>
-                                    </defs>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.65703 7.071L2.66411e-05 1.414L1.41403 -4.94551e-07L6.36403 4.95L11.314 -6.18079e-08L12.728 1.414L7.07103 7.071C6.8835 7.25847 6.62919 7.36379 6.36403 7.36379C6.09886 7.36379 5.84455 7.25847 5.65703 7.071Z"
+                                        fill="white" />
                                 </svg>
+
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
                                 <li><a class="dropdown-item" href="/running-event.html">Running Event</a></li>
@@ -91,20 +202,13 @@
                             <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="galleryDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Photo Gallery</span>
-                                <svg width="24" height="12" viewBox="0 0 24 12" fill="none"
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_1037_49102)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M11.289 10.1569L5.63199 4.49994L7.04598 3.08594L11.996 8.03594L16.946 3.08594L18.36 4.49994L12.703 10.1569C12.5155 10.3444 12.2612 10.4497 11.996 10.4497C11.7308 10.4497 11.4765 10.3444 11.289 10.1569Z"
-                                            fill="white" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1037_49103">
-                                            <rect width="12" height="24" fill="white"
-                                                transform="translate(24 0) rotate(90)" />
-                                        </clipPath>
-                                    </defs>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.65703 7.071L2.66411e-05 1.414L1.41403 -4.94551e-07L6.36403 4.95L11.314 -6.18079e-08L12.728 1.414L7.07103 7.071C6.8835 7.25847 6.62919 7.36379 6.36403 7.36379C6.09886 7.36379 5.84455 7.25847 5.65703 7.071Z"
+                                        fill="white" />
                                 </svg>
+
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
                                 <li><a class="dropdown-item" href="/sports-gallery.html">Sports Gallery</a></li>
@@ -136,8 +240,23 @@
 
     <main>
         <section class="banner">
-            <img draggable="false" class="w-100" src="assets/image/606b2f80c4cf3adbd573a40737931ba6b55c35f2.jpg" alt="Amputee Football Festival Banner">
-            <div class="banner-content container">
+            <div class="swiper mySwiperBg">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide justify-content-start">
+                        <img src="assets/image/606b2f80c4cf3adbd573a40737931ba6b55c35f2.jpg" alt="Banner 1">
+                    </div>
+                    <div class="swiper-slide justify-content-start">
+                        <img src="assets/image/banner-1.jpg" alt="Banner 2">
+                    </div>
+                    <div class="swiper-slide justify-content-start">
+                        <img src="assets/image/banner-2.jpg" alt="Banner 2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <img draggable="false" class="w-100" src="assets/image/606b2f80c4cf3adbd573a40737931ba6b55c35f2.jpg"
+                alt="Amputee Football Festival Banner"> -->
+            <div class="banner-content container z-3">
                 <div class="swiper mySwiper d-flex">
                     <div class="swiper-wrapper w-75 bg-common banner-main-content-area">
                         <div class="swiper-slide">
@@ -147,7 +266,7 @@
                                     together 45 players on Monday at
                                     the Fayyaz Stadiumadjacent to the National Parliament, organised by the National
                                     Paralympic</p>
-                                <a href="" class="read-more mt-16">Read More</a>
+                                <a href="" class="read-more mt-16 btn-1 slower">Read More</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -157,7 +276,7 @@
                                     together 45 players on Monday at
                                     the Fayyaz Stadiumadjacent to the National Parliament, organised by the National
                                     Paralympic</p>
-                                <a href="" class="read-more mt-16">Read More</a>
+                                <a href="" class="read-more mt-16 btn-1 slower">Read More</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -167,7 +286,7 @@
                                     together 45 players on Monday at
                                     the Fayyaz Stadiumadjacent to the National Parliament, organised by the National
                                     Paralympic</p>
-                                <a href="" class="read-more mt-16">Read More</a>
+                                <a href="" class="read-more mt-16 btn-1 slower">Read More</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -177,7 +296,7 @@
                                     together 45 players on Monday at
                                     the Fayyaz Stadiumadjacent to the National Parliament, organised by the National
                                     Paralympic</p>
-                                <a href="" class="read-more mt-16">Read More</a>
+                                <a href="" class="read-more mt-16 btn-1 slower">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -210,56 +329,75 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Top News Section Start -->
-        <section class="container top-news-section py-100">
-            <div class="d-flex justify-content-between mb-30">
-                <h2 class="title-two">Top News</h2>
-                <a href="news-and-updates.html" class="btn-common btn btn-primary">View all</a>
-            </div>
-            <div class="row px-md-0 row-cols-xl-2 justify-content-center justify-content-between">
-                <div class="top-news-card highlight">
-                    <img src="assets/image/top-news/1.jpg" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-four mb-2 p-0">
-                            <a href="" class="">Amputee Football Festival </a>
-                        </h5>
-                        <p class="content-text-sm">A spirited celebration of amputee football brought together 45
-                            players</p>
-                    </div>
+        <section class=" top-news-section py-100 bg-white-muted">
+            <div class="container">
+                <div class="d-flex justify-content-between mb-30">
+                    <h2 class="title-two">Top News</h2>
+                    <a href="news-and-updates.html" class="btn-1 btn-common btn  text-white btn-primary slower">View
+                        all</a>
                 </div>
+                <div class="row px-md-0 row-cols-xl-2 justify-content-center justify-content-between g-4">
+                    <div class="">
+                        <div class="top-news-card highlight card-smooth">
+                            <img src="assets/image/top-news/1.jpg" class="card-img-top" alt="news image">
+                            <div class="card-body">
+                                <h5 class="title-four mb-2 p-0">
+                                    <a href="" class="">Amputee Football Festival </a>
+                                </h5>
+                                <p class="content-text-sm">A spirited celebration of amputee football brought together
+                                    45
+                                    players</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="row px-md-0 row-cols-md-2 justify-content-center g-4">
+                            <div class="">
+                                <div class="top-news-card hover-fill-horizontal">
+                                    <img src="assets/image/top-news/2.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four p-0">
+                                            <a href="news-details.html" class="">National Youth Para Games concluded</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
 
-                <div class="row px-md-0 row-cols-md-2 justify-content-center">
+                                <div class="top-news-card mb-md-0 hover-fill-horizontal">
+                                    <img src="assets/image/top-news/3.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four p-0">
+                                            <a href="" class="news-details.html">National Para Table Tennis Championship
+                                                Begins</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
 
-                    <div class="top-news-card">
-                        <img src="assets/image/top-news/2.jpg" class="card-img-top" alt="news image">
-                        <div class="card-body">
-                            <h5 class="title-four pb-0">
-                                <a href="news-details.html" class="">National Youth Para Games concluded</a>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="top-news-card mb-md-0">
-                        <img src="assets/image/top-news/3.jpg" class="card-img-top" alt="news image">
-                        <div class="card-body">
-                            <h5 class="title-four pb-0">
-                                <a href="" class="news-details.html">National Para Table Tennis Championship Begins</a>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="top-news-card mb-md-0">
-                        <img src="assets/image/top-news/4.jpg" class="card-img-top" alt="news image">
-                        <div class="card-body">
-                            <h5 class="title-four pb-0">
-                                <a href="news-details.html" class="">UNB, Dhaka</a>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="top-news-card mb-md-0">
-                        <img src="assets/image/top-news/5.jpg" class="card-img-top" alt="news image">
-                        <div class="card-body">
-                            <h5 class="title-four pb-0">
-                                <a href="news-details.html" class="">National Youth Para Games concluded</a>
-                            </h5>
+                                <div class="top-news-card mb-md-0 hover-fill-horizontal">
+                                    <img src="assets/image/top-news/4.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four p-0">
+                                            <a href="news-details.html" class="">UNB, Dhaka</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="top-news-card mb-md-0 hover-fill-horizontal">
+                                    <img src="assets/image/top-news/5.jpg" class="card-img-top" alt="news image">
+                                    <div class="card-body">
+                                        <h5 class="title-four p-0">
+                                            <a href="news-details.html" class="">National Youth Para Games concluded</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -271,25 +409,29 @@
             <div class="container">
                 <div class="d-flex justify-content-between mb-30">
                     <h2 class="title-two text-white">Game News</h2>
-                    <a href="news-and-updates.html" class="btn-common btn btn-default text-primary bg-white">View
+                    <a href="news-and-updates.html"
+                        class="btn-common btn btn-default text-primary bg-white  btn-1 slower">View
                         all</a>
                 </div>
                 <div class="gaming-news-slider position-relative">
                     <div class="swiper myGamingSwiper">
                         <div class="swiper-wrapper mb-5">
                             <div class="swiper-slide">
-                                <div class="gaming-news-card">
-                                    <img src="assets/image/gaming-news/1.jpg" class="card-img-top" alt="news image">
-                                    <div class="card-body">
-                                        <h5 class="title-four">
-                                            <a href="news-details.html" class="">'BCB meetings won’t count without
-                                                action'</a>
-                                        </h5>
+                                <a href="news-details.html" >
+                                    <div class="gaming-news-card card-smooth hover-fill-horizontal fill-white-muted">
+                                        <img src="assets/image/gaming-news/1.jpg" class="card-img-top" alt="news image">
+                                        <div class="card-body">
+                                            <h5 class="title-four">
+                                                <a href="news-details.html" class="">'BCB meetings won’t count without
+                                                    action'</a>
+                                            </h5>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card">
+                                <a href="news-details.html" >
+                                <div class="gaming-news-card card-smooth">
                                     <img src="assets/image/gaming-news/2.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
@@ -298,41 +440,52 @@
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card">
+                                <a href="news-details.html" >
+                                <div class="gaming-news-card card-smooth">
                                     <img src="assets/image/gaming-news/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">National Youth Para Games begin with a
+                                            <a href="news-details.html" class="">National Youth Para Games begin
+                                                with a
                                                 ....</a>
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card">
+                                <a href="news-details.html" >
+                                <div class="gaming-news-card card-smooth">
                                     <img src="assets/image/gaming-news/4.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">National Youth Para Games concluded</a>
+                                            <a href="news-details.html" class="">National Youth Para Games
+                                                concluded</a>
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card">
+                                <a href="news-details.html" >
+                                <div class="gaming-news-card card-smooth">
                                     <img src="assets/image/gaming-news/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">National Youth Para Games begin with a
+                                            <a href="news-details.html" class="">National Youth Para Games begin
+                                                with a
                                                 ....</a>
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card">
+                                <a href="news-details.html" >
+                                <div class="gaming-news-card card-smooth">
                                     <img src="assets/image/gaming-news/1.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
@@ -341,16 +494,20 @@
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card">
+                                <a href="news-details.html" >
+                                <div class="gaming-news-card card-smooth">
                                     <img src="assets/image/gaming-news/4.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="news-details.html" class="">National Youth Para Games concluded</a>
+                                            <a href="news-details.html" class="">National Youth Para Games
+                                                concluded</a>
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="right-0">
@@ -388,17 +545,18 @@
         <!-- Game News Section End -->
 
         <!-- Running Event Section Start -->
-        <section class="py-100">
+        <section class="py-100 bg-white-muted">
             <div class="container">
                 <div class="d-flex justify-content-between mb-30">
                     <h2 class="title-two">Running Event</h2>
-                    <a href="/running-event.html" class="btn-common btn btn-primary">View all</a>
+                    <a href="/running-event.html" class="btn-common btn btn-primary  btn-1 slower">View all</a>
                 </div>
                 <div class="gaming-news-slider position-relative">
                     <div class="swiper myRunningEventSwiper">
                         <div class="swiper-wrapper mb-5">
                             <div class="swiper-slide">
-                                <div class="gaming-news-card running-event-card">
+                                <a href="event-details.html" >
+                                <div class="gaming-news-card running-event-card card-smooth ">
                                     <img src="assets/image/running-event/1.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
@@ -407,31 +565,39 @@
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card running-event-card">
+                                <a href="event-details.html" >
+                                <div class="gaming-news-card running-event-card card-smooth ">
                                     <img src="assets/image/running-event/2.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">Amputee Football Festival showcases
+                                            <a href="event-details.html" class="">Amputee Football Festival
+                                                showcases
                                                 ...</a>
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card running-event-card">
+                                <a href="event-details.html" >
+                                <div class="gaming-news-card running-event-card card-smooth ">
                                     <img src="assets/image/running-event/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">National Youth Para Games begin with a
+                                            <a href="event-details.html" class="">National Youth Para Games begin
+                                                with a
                                                 ....</a>
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card running-event-card">
+                                <a href="event-details.html" >
+                                <div class="gaming-news-card running-event-card card-smooth ">
                                     <img src="assets/image/running-event/4.png" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
@@ -440,20 +606,25 @@
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card running-event-card">
+                                <a href="event-details.html" >
+                                <div class="gaming-news-card running-event-card card-smooth ">
                                     <img src="assets/image/running-event/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
-                                            <a href="event-details.html" class="">National Youth Para Games begin with a
+                                            <a href="event-details.html" class="">National Youth Para Games begin
+                                                with a
                                                 ....</a>
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card running-event-card">
+                                <a href="event-details.html" >
+                                <div class="gaming-news-card running-event-card card-smooth ">
                                     <img src="assets/image/running-event/1.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
@@ -462,9 +633,11 @@
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card running-event-card">
+                                <a href="event-details.html" >
+                                <div class="gaming-news-card running-event-card card-smooth ">
                                     <img src="assets/image/running-event/4.png" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <h5 class="title-four">
@@ -473,6 +646,7 @@
                                         </h5>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="right-0">
@@ -509,13 +683,15 @@
             <div class="container">
                 <div class="d-flex justify-content-between mb-30">
                     <h2 class="title-two text-white">Upcoming Event</h2>
-                    <a href="/upcoming-event.html" class="btn-common btn btn-default text-primary bg-white">View all</a>
+                    <a href="/upcoming-event.html"
+                        class="btn-common btn btn-default text-primary bg-white  btn-1 slower">View
+                        all</a>
                 </div>
                 <div class="gaming-news-slider position-relative">
                     <div class="swiper myUpcomingEventSwiper">
                         <div class="swiper-wrapper mb-5">
-                            <div class="swiper-slide">
-                                <div class="upcoming-event-card">
+                            <div class="swiper-slide ">
+                                <div class="upcoming-event-card card-smooth">
                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
                                         <img src="assets/image/upcoming-event/1.jpg" class="card-img-top img-thumbnail"
                                             alt="Upcoming Event 1">
@@ -523,7 +699,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="upcoming-event-card">
+                                <div class="upcoming-event-card card-smooth">
                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
                                         <img src="assets/image/upcoming-event/2.jpg" class="card-img-top img-thumbnail"
                                             alt="news image">
@@ -531,28 +707,28 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="upcoming-event-card">
+                                <div class="upcoming-event-card card-smooth">
                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
                                         <img src="assets/image/upcoming-event/3.png" class="card-img-top img-thumbnail"
                                             alt="news image"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="upcoming-event-card">
+                                <div class="upcoming-event-card card-smooth">
                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
                                         <img src="assets/image/upcoming-event/4.png" class="card-img-top img-thumbnail"
                                             alt="news image"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="upcoming-event-card">
+                                <div class="upcoming-event-card card-smooth">
                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
                                         <img src="assets/image/upcoming-event/3.png" class="card-img-top img-thumbnail"
                                             alt="news image"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="upcoming-event-card">
+                                <div class="upcoming-event-card card-smooth">
                                     <a href="/upcoming-event-details.html" aria-label="Upcoming Event 1">
                                         <img src="assets/image/upcoming-event/2.jpg" class="card-img-top img-thumbnail"
                                             alt="news image"></a>
@@ -593,18 +769,21 @@
         </section>
         <!-- Upcoming Event Section End -->
         <!-- Our mission and vision section start -->
-        <section class="container py-100">
-            <div class="row row-cols-md-2 align-items-center">
-                <div class="text-center mb-md-0 mb-4">
-                    <img class="img-fluid rounded-2" src="assets/image/mission-vision.png" alt="Mission and Vision">
-                </div>
-                <div class="">
-                    <h3 class="title-two mb-3">Our mission and vision</h3>
-                    <p class="content-text mb-3">The mission & vision of the National Paralympic Committee of Bangladesh
-                        (NPCB) is aligned with
-                        International Paralympic Committee's mission & vision. NPCB promotes the Paralympic movement
-                        within the country, enabling Para athletes to achieve sporting excellence.</p>
-                    <a href="/about.html" class="btn-primary btn-common">Read More</a>
+        <section class=" py-100 bg-white-muted">
+            <div class="container">
+                <div class="row row-cols-md-2 align-items-center">
+                    <div class="text-center mb-md-0 mb-4">
+                        <img class="img-fluid rounded-2" src="assets/image/mission-vision.png" alt="Mission and Vision">
+                    </div>
+                    <div class="">
+                        <h3 class="title-two mb-3">Our mission and vision</h3>
+                        <p class="content-text mb-3">The mission & vision of the National Paralympic Committee of
+                            Bangladesh
+                            (NPCB) is aligned with
+                            International Paralympic Committee's mission & vision. NPCB promotes the Paralympic movement
+                            within the country, enabling Para athletes to achieve sporting excellence.</p>
+                        <a href="/about.html" class="btn-primary btn-common btn-1 slower">Read More</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -614,13 +793,13 @@
             <div class="container">
                 <div class="d-flex justify-content-between mb-30">
                     <h2 class="title-two">Our Latest Blog</h2>
-                    <a href="" class="btn-common btn btn-primary">View all</a>
+                    <a href="" class="btn-common btn btn-primary btn-1 slower">View all</a>
                 </div>
                 <div class="gaming-news-slider position-relative">
                     <div class="swiper myLatestBlogSwiper">
                         <div class="swiper-wrapper mb-5">
-                            <div class="swiper-slide">
-                                <div class="gaming-news-card latest-blog-card">
+                            <div class="swiper-slide ">
+                                <div class="gaming-news-card latest-blog-card card-smooth">
                                     <img src="assets/image/latest-blog/1.png" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <p class="content-text d-flex align-items-center"><svg width="24" height="24"
@@ -640,7 +819,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card latest-blog-card">
+                                <div class="gaming-news-card latest-blog-card card-smooth">
                                     <img src="assets/image/latest-blog/2.png" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <p class="content-text d-flex align-items-center"><svg width="24" height="24"
@@ -660,7 +839,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card latest-blog-card">
+                                <div class="gaming-news-card latest-blog-card card-smooth">
                                     <img src="assets/image/latest-blog/3.png" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <p class="content-text d-flex align-items-center"><svg width="24" height="24"
@@ -680,7 +859,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card latest-blog-card">
+                                <div class="gaming-news-card latest-blog-card card-smooth">
                                     <img src="assets/image/running-event/3.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <p class="content-text d-flex align-items-center"><svg width="24" height="24"
@@ -699,7 +878,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card latest-blog-card">
+                                <div class="gaming-news-card latest-blog-card card-smooth">
                                     <img src="assets/image/running-event/2.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <p class="content-text d-flex align-items-center"><svg width="24" height="24"
@@ -718,7 +897,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card latest-blog-card">
+                                <div class="gaming-news-card latest-blog-card card-smooth">
                                     <img src="assets/image/running-event/1.jpg" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <p class="content-text d-flex align-items-center"><svg width="24" height="24"
@@ -737,7 +916,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="gaming-news-card latest-blog-card">
+                                <div class="gaming-news-card latest-blog-card card-smooth">
                                     <img src="assets/image/running-event/4.png" class="card-img-top" alt="news image">
                                     <div class="card-body">
                                         <p class="content-text d-flex align-items-center"><svg width="24" height="24"
@@ -789,7 +968,7 @@
     <!-- Footer Start -->
     <footer class="text-white">
         <div class="container">
-            <div class="row justify-content-between pt-100 footer-block gap-xl-5">
+            <div class="row justify-content-between pt-100 footer-block g-md-5 gy-4">
 
                 <!-- Column 1: INFORMATION -->
                 <div class="col-lg-4 col-md-6 max-width-fit">
@@ -916,7 +1095,7 @@
                         CONTACT US
                         <span class="custom-underline d-block"></span>
                     </h5>
-                    <a href="tel:01818-670403" class="mb-2 d-flex gap-2">
+                    <a href="tel:01818-670403" class="d-flex gap-2 align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path
                                 d="M6.49677 2.25C6.10392 2.25 5.71693 2.39063 5.39444 2.64844L5.34754 2.67188L5.32408 2.69531L2.97872 5.10938L3.00217 5.13281C2.27804 5.80078 2.05523 6.79981 2.36892 7.66406C2.37185 7.66992 2.36599 7.68164 2.36892 7.6875C3.0051 9.50684 4.6322 13.0195 7.81017 16.1953C10.9999 19.3828 14.5619 20.9443 16.3238 21.6328H16.3473C17.2591 21.9375 18.247 21.7207 18.9507 21.1172L21.3195 18.75C21.941 18.1289 21.941 17.0508 21.3195 16.4297L18.2705 13.3828L18.247 13.3359C17.6255 12.7148 16.5232 12.7148 15.9017 13.3359L14.4006 14.8359C13.8583 14.5752 12.5654 13.9072 11.3282 12.7266C10.0998 11.5547 9.47245 10.207 9.24084 9.67969L10.7419 8.17969C11.3722 7.54981 11.3839 6.50098 10.7184 5.88281L10.7419 5.85938L10.6715 5.78906L7.66945 2.69531L7.646 2.67188L7.59909 2.64844C7.2766 2.39063 6.88962 2.25 6.49677 2.25Z"
@@ -925,7 +1104,7 @@
                         01818-670403
                     </a>
 
-                    <a href="tel:01928-174380" class="mb-2 d-flex gap-2">
+                    <a href="tel:01928-174380" class="d-flex gap-2 align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path
                                 d="M9.00609 3.75V7.5H7.50505V6H3.00195V19.5H4.50299V20.25C4.50299 21.4834 5.52029 22.5 6.75454 22.5C7.98879 22.5 9.00609 21.4834 9.00609 20.25V19.5H21.0144V7.5H18.0123V3.75H9.00609ZM10.5071 5.25H16.5113V9H10.5071V5.25ZM4.50299 7.5H6.00402V18H4.50299V7.5ZM7.50505 9H9.00609V10.5H18.0123V9H19.5133V18H7.50505V9ZM9.75661 12V13.5H11.2576V12H9.75661ZM12.7587 12V13.5H14.2597V12H12.7587ZM15.7607 12V13.5H17.2618V12H15.7607ZM9.75661 15V16.5H11.2576V15H9.75661ZM12.7587 15V16.5H14.2597V15H12.7587ZM15.7607 15V16.5H17.2618V15H15.7607ZM6.00402 19.5H7.50505V20.25C7.50505 20.666 7.17084 21 6.75454 21C6.33824 21 6.00402 20.666 6.00402 20.25V19.5Z"
@@ -934,7 +1113,7 @@
                         01928-174380
                     </a>
 
-                    <a href="mailto:demo@gmail.com" class="mb-2 d-flex gap-2">
+                    <a href="mailto:demo@gmail.com" class="d-flex gap-2 text-lowercase align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path
                                 d="M2.25146 6V19.5H21.7649V6H2.25146ZM5.48807 7.5H18.5283L12.0082 11.8359L5.48807 7.5ZM3.7525 8.15625L11.586 13.3828L12.0082 13.6406L12.4304 13.3828L20.2639 8.15625V18H3.7525V8.15625Z"
@@ -971,8 +1150,8 @@
         <div class="footer-hr"></div>
 
         <!-- Social Icons -->
-        <div class="social-icons justify-content-center d-flex gap-3 py-28">
-            <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook">
+        <div class="social-icons justify-content-center d-flex py-28 gap-3">
+            <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook ">
                 <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.5" y="0.5" width="29" height="29" rx="4.5" stroke="white" />
                     <path

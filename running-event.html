@@ -21,9 +21,9 @@
 
     <style>
         .published-date {
-            padding: 10px 8px;
+            padding: 8px 10px;
             gap: 8px;
-            border-radius: 5px;
+            border-radius: 0 !important;
             color: var(--common-white);
             position: absolute;
             bottom: 20px;
@@ -40,6 +40,7 @@
             padding: 20px;
             border: 1px solid #EAEAEA;
             border-top: 0;
+            background-color: var(--common-white);
 
         }
     </style>
@@ -51,7 +52,7 @@
             <div class="container">
 
                 <!-- Logo -->
-                                <a class="navbar-brand d-inline" href="/index.html">
+                <a class="navbar-brand d-inline" href="/index.html">
                     <img src="/assets/image/logo.png" alt="Bangladesh Flag & NPC Logo" class="img-fluid">
                 </a>
 
@@ -62,46 +63,82 @@
 
                 <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse justify-content-end custom-nav-manu" id="navbarNav">
-                    <ul class="navbar-nav gap-3 text-md-center text-lg-start gap-3">
+                    <ul class="navbar-nav gap-md-4 gap-3 mt-3 mt-lg-0 text-md-center text-lg-start">
+
+                        <!-- Home -->
                         <li class="nav-item">
                             <a class="nav-link p-0" href="/index.html"><span>Home</span></a>
                         </li>
+
+                        <!-- About -->
                         <li class="nav-item">
-                            <a class="nav-link p-0 d-inline-flex gap-1" href="about.html">
+                            <a class="nav-link p-0 gap-1" href="about.html">
                                 <span>About us</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow">
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="/running-event.html">
+
+                        <!-- Events Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="eventsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Events</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow">
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.65703 7.071L2.66411e-05 1.414L1.41403 -4.94551e-07L6.36403 4.95L11.314 -6.18079e-08L12.728 1.414L7.07103 7.071C6.8835 7.25847 6.62919 7.36379 6.36403 7.36379C6.09886 7.36379 5.84455 7.25847 5.65703 7.071Z"
+                                        fill="white" />
+                                </svg>
+
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                <li><a class="dropdown-item" href="/running-event.html">Running Event</a></li>
+                                <li><a class="dropdown-item" href="/upcoming-event.html">Upcoming Event</a></li>
+                            </ul>
                         </li>
+
+                        <!-- News -->
                         <li class="nav-item">
                             <a class="nav-link p-0" href="news-and-updates.html">
                                 <span>News</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow">
+
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="#">
+
+                        <!-- Photo Gallery Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="galleryDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Photo Gallery</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow">
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.65703 7.071L2.66411e-05 1.414L1.41403 -4.94551e-07L6.36403 4.95L11.314 -6.18079e-08L12.728 1.414L7.07103 7.071C6.8835 7.25847 6.62919 7.36379 6.36403 7.36379C6.09886 7.36379 5.84455 7.25847 5.65703 7.071Z"
+                                        fill="white" />
+                                </svg>
+
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                                <li><a class="dropdown-item" href="/sports-gallery.html">Sports Gallery</a></li>
+                                <li><a class="dropdown-item" href="/event-gallery.html">Event Gallery</a></li>
+                            </ul>
                         </li>
+
+                        <!-- Sports -->
                         <li class="nav-item">
                             <a class="nav-link p-0" href="sports.html">
                                 <span>Sports</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow">
+
                             </a>
                         </li>
+
+                        <!-- Contact -->
                         <li class="nav-item">
                             <a class="nav-link p-0" href="/contact.html">
                                 <span>Contact Us</span>
-                                <img src="/assets/image/down-arow.svg" alt="down-arow">
+
                             </a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -112,108 +149,169 @@
         <!-- Breadcrumb Section Start -->
         <section class="breadcrumb position-relative">
             <img class="img-fluid" src="assets/image/about/breadcrumb.png" alt="">
-            <img class="position-absolute bottom-0 w-100" draggable="false" src="assets/image/about/breadcrumb-gradient.png" alt="">
+            <img class="position-absolute bottom-0 w-100" draggable="false"
+                src="assets/image/about/breadcrumb-gradient.png" alt="">
             <h6 class="page-title title-one position-absolute">Running Event</h6>
         </section>
         <!-- Breadcrumb Section End -->
         <!-- News & Updates section start -->
         <section class="py-100 container">
             <div class="row row-cols-xl-4 row-cols-md-3 row-cols-sm-2 g-4">
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/1.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/1.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/2.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/2.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/3.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/3.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/4.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/4.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/5.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/5.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/6.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/6.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/7.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/7.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/8.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/8.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/1.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/1.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/2.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/2.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/3.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/3.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
-                <div class="gaming-news-card running-event-card">
-                    <img src="assets/image/running-event/details/4.png" class="card-img-top" alt="news image">
-                    <div class="card-body">
-                        <h5 class="title-five">
-                            <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby Show </a>
-                        </h5>
+                <div>
+                        <a href="event-details.html" >
+                    <div class="gaming-news-card running-event-card card-smooth">
+                        <img src="assets/image/running-event/details/4.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <h5 class="title-five">
+                                <a href="/event-details.html" class="">Laila Edwards, Alex Ferreira & Brenna Huckaby
+                                    Show </a>
+                            </h5>
+                        </div>
                     </div>
+                        </a>
                 </div>
             </div>
             <div class=" text-center">
@@ -240,10 +338,10 @@
         <!-- News & Updates contact section End -->
     </main>
 
-   <!-- Footer Start -->
+    <!-- Footer Start -->
     <footer class="text-white">
         <div class="container">
-            <div class="row justify-content-between pt-100 footer-block gap-xl-5">
+            <div class="row justify-content-between pt-100 footer-block g-md-5 gy-4">
 
                 <!-- Column 1: INFORMATION -->
                 <div class="col-lg-4 col-md-6 max-width-fit">
@@ -370,7 +468,7 @@
                         CONTACT US
                         <span class="custom-underline d-block"></span>
                     </h5>
-                    <a href="tel:01818-670403" class="mb-2 d-flex gap-2">
+                    <a href="tel:01818-670403" class="d-flex gap-2 align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path
                                 d="M6.49677 2.25C6.10392 2.25 5.71693 2.39063 5.39444 2.64844L5.34754 2.67188L5.32408 2.69531L2.97872 5.10938L3.00217 5.13281C2.27804 5.80078 2.05523 6.79981 2.36892 7.66406C2.37185 7.66992 2.36599 7.68164 2.36892 7.6875C3.0051 9.50684 4.6322 13.0195 7.81017 16.1953C10.9999 19.3828 14.5619 20.9443 16.3238 21.6328H16.3473C17.2591 21.9375 18.247 21.7207 18.9507 21.1172L21.3195 18.75C21.941 18.1289 21.941 17.0508 21.3195 16.4297L18.2705 13.3828L18.247 13.3359C17.6255 12.7148 16.5232 12.7148 15.9017 13.3359L14.4006 14.8359C13.8583 14.5752 12.5654 13.9072 11.3282 12.7266C10.0998 11.5547 9.47245 10.207 9.24084 9.67969L10.7419 8.17969C11.3722 7.54981 11.3839 6.50098 10.7184 5.88281L10.7419 5.85938L10.6715 5.78906L7.66945 2.69531L7.646 2.67188L7.59909 2.64844C7.2766 2.39063 6.88962 2.25 6.49677 2.25Z"
@@ -379,7 +477,7 @@
                         01818-670403
                     </a>
 
-                    <a href="tel:01928-174380" class="mb-2 d-flex gap-2">
+                    <a href="tel:01928-174380" class="d-flex gap-2 align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path
                                 d="M9.00609 3.75V7.5H7.50505V6H3.00195V19.5H4.50299V20.25C4.50299 21.4834 5.52029 22.5 6.75454 22.5C7.98879 22.5 9.00609 21.4834 9.00609 20.25V19.5H21.0144V7.5H18.0123V3.75H9.00609ZM10.5071 5.25H16.5113V9H10.5071V5.25ZM4.50299 7.5H6.00402V18H4.50299V7.5ZM7.50505 9H9.00609V10.5H18.0123V9H19.5133V18H7.50505V9ZM9.75661 12V13.5H11.2576V12H9.75661ZM12.7587 12V13.5H14.2597V12H12.7587ZM15.7607 12V13.5H17.2618V12H15.7607ZM9.75661 15V16.5H11.2576V15H9.75661ZM12.7587 15V16.5H14.2597V15H12.7587ZM15.7607 15V16.5H17.2618V15H15.7607ZM6.00402 19.5H7.50505V20.25C7.50505 20.666 7.17084 21 6.75454 21C6.33824 21 6.00402 20.666 6.00402 20.25V19.5Z"
@@ -388,7 +486,7 @@
                         01928-174380
                     </a>
 
-                    <a href="mailto:demo@gmail.com" class="mb-2 d-flex gap-2">
+                    <a href="mailto:demo@gmail.com" class="d-flex gap-2 text-lowercase align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path
                                 d="M2.25146 6V19.5H21.7649V6H2.25146ZM5.48807 7.5H18.5283L12.0082 11.8359L5.48807 7.5ZM3.7525 8.15625L11.586 13.3828L12.0082 13.6406L12.4304 13.3828L20.2639 8.15625V18H3.7525V8.15625Z"
@@ -425,8 +523,8 @@
         <div class="footer-hr"></div>
 
         <!-- Social Icons -->
-        <div class="social-icons justify-content-center d-flex gap-3 py-28">
-            <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook">
+        <div class="social-icons justify-content-center d-flex py-28 gap-3">
+            <a href="#" target="_blank" aria-label="Facebook" class="social-icon facebook ">
                 <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.5" y="0.5" width="29" height="29" rx="4.5" stroke="white" />
                     <path
