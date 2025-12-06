@@ -309,7 +309,7 @@ button {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    transition: all 0.8s ease-in-out
+    transition: transform 0.8s ease-in-out
 }
 
 .btn-1::before {
@@ -908,6 +908,15 @@ footer {
     fill: #379A37;
 }
 
+.custom-footer-list li span {
+    transition: padding-left 0.3s ease;
+}
+
+.custom-footer-list li a:hover span {
+    padding-left: 4px;
+    transition: padding-left 0.3s ease;
+}
+
 .copyright {
     font-weight: 400;
     font-size: 14px;
@@ -949,4 +958,36 @@ footer {
     stroke: #0A66C2;
     /* LinkedIn blue */
     fill: #0A66C2;
+}
+
+/* Back To top */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: var(--common-color);
+    border: 2px solid #fff;
+    /* brand red */
+    color: #fff;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    border: 1px solid #fff;
+
+}
+
+.back-to-top:hover {
+    background-color: var(--common-color);
 }
