@@ -425,11 +425,19 @@ button {
 /*                 HEADER CSS                         */
 /* ================================================== */
 
-.custom-nav-manu a.nav-link {
+.custom-nav-manu a.nav-link, .custom-nav-manu a.dropdown-item {
     font-weight: 400;
     font-style: normal;
     font-size: clamp(14px, 1.5vw, 16px);
     color: #FFFFFF;
+}
+.dropdown-menu{
+    background-color: var(--common-color);
+}
+.dropdown-item{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .navbar {
@@ -485,14 +493,15 @@ ul.dropdown-menu.show {
     color: #fff;
 }
 
-.nav-link {
+.nav-link, .dropdown-item {
     position: relative !important;
     display: inline-block;
     color: inherit;
     text-decoration: none;
 }
 
-.nav-link::after {
+
+.nav-link::after, .dropdown-item::after {
     content: "";
     position: absolute;
     left: 0;
@@ -503,7 +512,7 @@ ul.dropdown-menu.show {
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after, .dropdown-item:hover::after {
     width: 100%;
 }
 

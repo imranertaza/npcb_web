@@ -13,8 +13,13 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".custom-swiper-button-next",
     prevEl: ".custom-swiper-button-prev",
   },
-  speed: 400,              // transition duration in ms (default 300)
-  effect: "slide",          // can also try "fade" for smoother crossfade
+  speed: 400,
+  effect: "slide",
+  allowTouchMove: false,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 });
 
 var swiperBg = new Swiper(".mySwiperBg", {
@@ -32,10 +37,15 @@ var swiperBg = new Swiper(".mySwiperBg", {
     nextEl: ".custom-swiper-button-next",
     prevEl: ".custom-swiper-button-prev",
   },
-  speed: 600,              // slower transition
-  effect: "fade",           // fade looks smoother for background images
+  speed: 600,
+  effect: "fade",
   fadeEffect: {
     crossFade: true,
+  },
+  allowTouchMove: false,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
   },
 });
 
@@ -48,18 +58,18 @@ var gamingSwiper = new Swiper(".myGamingSwiper", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1, // mobile
+      slidesPerView: 1,
     },
     480: {
-      slidesPerView: 2, // small tablets
+      slidesPerView: 2,
     },
     768: {
-      slidesPerView: 3, // tablets
+      slidesPerView: 3,
     },
     992: {
-      slidesPerView: 4, // desktops
-    }
-  }
+      slidesPerView: 4,
+    },
+  },
 });
 
 var runningEventSwiper = new Swiper(".myRunningEventSwiper", {
@@ -84,8 +94,8 @@ var runningEventSwiper = new Swiper(".myRunningEventSwiper", {
     },
     1200: {
       slidesPerView: 4,
-    }
-  }
+    },
+  },
 });
 
 var upcomingEventSwiper = new Swiper(".myUpcomingEventSwiper", {
@@ -107,10 +117,11 @@ var upcomingEventSwiper = new Swiper(".myUpcomingEventSwiper", {
     },
     992: {
       slidesPerView: 3,
-    },1200: {
+    },
+    1200: {
       slidesPerView: 4,
-    }
-  }
+    },
+  },
 });
 
 var latestBlogSwiper = new Swiper(".myLatestBlogSwiper", {
@@ -132,6 +143,6 @@ var latestBlogSwiper = new Swiper(".myLatestBlogSwiper", {
     },
     992: {
       slidesPerView: 3,
-    }
-  }
+    },
+  },
 });

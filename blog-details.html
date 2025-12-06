@@ -57,7 +57,7 @@
 </head>
 
 <body>
-    <header>
+   <header>
         <nav class="navbar navbar-expand-xl bg-common py-28 position-absolute z-3 w-100">
             <div class="container">
 
@@ -80,18 +80,50 @@
                             <a class="nav-link p-0" href="/index.html"><span>Home</span></a>
                         </li>
 
-                        <!-- About -->
-                        <li class="nav-item">
-                            <a class="nav-link p-0 gap-1" href="about.html">
-                                <span>About us</span>
+                        <!-- About Us Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="eventsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>About</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.65703 7.071L2.66411e-05 1.414L1.41403 -4.94551e-07L6.36403 4.95L11.314 -6.18079e-08L12.728 1.414L7.07103 7.071C6.8835 7.25847 6.62919 7.36379 6.36403 7.36379C6.09886 7.36379 5.84455 7.25847 5.65703 7.071Z"
+                                        fill="white" />
+                                </svg>
+
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                <li><a class="dropdown-item" href="/about.html">About us</a></li>
+                                <li><a class="dropdown-item" href="/history.html">History</a></li>
+                                <li><a class="dropdown-item" href="/executive-committee.html">Executive Committee</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Sports & Activities Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="eventsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Sports</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.65703 7.071L2.66411e-05 1.414L1.41403 -4.94551e-07L6.36403 4.95L11.314 -6.18079e-08L12.728 1.414L7.07103 7.071C6.8835 7.25847 6.62919 7.36379 6.36403 7.36379C6.09886 7.36379 5.84455 7.25847 5.65703 7.071Z"
+                                        fill="white" />
+                                </svg>
+
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                <li><a class="dropdown-item" href="/sports.html">Sports</a></li>
+                                <li><a class="dropdown-item" href="/sports-details.html">Sports Details</a></li>
+                            </ul>
                         </li>
 
                         <!-- Events Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="eventsDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <span>Events</span>
+                                <span>Events & Fixtures</span>
                                 <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -103,22 +135,38 @@
                             <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
                                 <li><a class="dropdown-item" href="/running-event.html">Running Event</a></li>
                                 <li><a class="dropdown-item" href="/upcoming-event.html">Upcoming Event</a></li>
+                                <li><a class="dropdown-item" href="/match-fixtures.html">Match Fixtures</a></li>
+                                <li><a class="dropdown-item" href="/tournament-result.html">Tournament Result</a></li>
                             </ul>
                         </li>
 
-                        <!-- News -->
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="news-and-updates.html">
-                                <span>News</span>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="eventsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>News & Updates</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.65703 7.071L2.66411e-05 1.414L1.41403 -4.94551e-07L6.36403 4.95L11.314 -6.18079e-08L12.728 1.414L7.07103 7.071C6.8835 7.25847 6.62919 7.36379 6.36403 7.36379C6.09886 7.36379 5.84455 7.25847 5.65703 7.071Z"
+                                        fill="white" />
+                                </svg>
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                <li><a class="dropdown-item" href="/notice-board.html">Notice Board</a></li>
+                                <li><a class="dropdown-item" href="/news-and-updates.html">News</a></li>
+                                <li><a class="dropdown-item" href="/news-details.html">News Details</a></li>
+                                <li><a class="dropdown-item" href="/spotlights.html">Spotlights</a></li>
+                                <li><a class="dropdown-item" href="/blog.html">Blog</a></li>
+                            </ul>
                         </li>
+
+
 
                         <!-- Photo Gallery Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link p-0 gap-1 dropdown-toggle" href="#" id="galleryDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <span>Photo Gallery</span>
+                                <span>Gallery</span>
                                 <svg width="13" height="8" viewBox="0 0 13 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -128,19 +176,10 @@
 
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
-                                <li><a class="dropdown-item" href="/sports-gallery.html">Sports Gallery</a></li>
-                                <li><a class="dropdown-item" href="/event-gallery.html">Event Gallery</a></li>
+                                <li><a class="dropdown-item" href="/sports-gallery.html">Sports</a></li>
+                                <li><a class="dropdown-item" href="/event-gallery.html">Event</a></li>
                             </ul>
                         </li>
-
-                        <!-- Sports -->
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="sports.html">
-                                <span>Sports</span>
-
-                            </a>
-                        </li>
-
                         <!-- Contact -->
                         <li class="nav-item">
                             <a class="nav-link p-0" href="/contact.html">
